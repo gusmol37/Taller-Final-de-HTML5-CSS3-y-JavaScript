@@ -1,0 +1,67 @@
+body {
+    font-size: 16px; /* 1rem = 10px*/
+    font-family: 'Krub', sans-serif;
+    background-color: rgb(195, 143, 244) ;
+}
+
+h1{
+    color: aliceblue;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 5%;    
+    margin-bottom: 5%;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.formulario .nombre,
+.correo,
+.asunto {
+    align-content: center;
+    width: 320px;
+    height: 30px;
+    margin-block-end: 15px;
+    border-radius: 10px;
+    background-color: rgb(253, 253, 253) ;
+    border: 2px solid #0c0c0b;
+}
+
+.mensaje {
+    width: 320px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #0c0c0b;
+}
+
+h1 {
+    text-align: center;
+}
+
+#enviar,
+#borrar {
+    padding: 0.5em 1em;
+    background: rgb(195, 143, 244);
+    cursor: pointer;
+    margin-left: 18%;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input,
+textarea {
+    font-size: 18px;
+}
+
+.aviso {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding-top: 20px;
+}

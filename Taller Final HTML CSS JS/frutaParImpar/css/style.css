@@ -1,0 +1,26 @@
+#container {
+    background-color: rgb(21, 80, 218);
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    width: 50%;
+    margin: auto;
+    padding: 20px 0 20px 0;
+       
+}
+
+#container-fruits {
+    padding-left: 20px;
+}
+
+h2  {
+    text-align: center;
+}
+
+h4.selector {
+    display: inline-block;
+}
+
+
+
+

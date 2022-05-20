@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Taller final de HTML5, CSS3 y JavaScript"/>
+        <title>Portafolio</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&display=swap" rel="stylesheet">
+        
+        <script src="javascript/bookstores/jquery.3.3.1.js"></script>
+        <script src="javascript/bookstores/materialize.js"></script>
+        <script src="javascript/bookstores/init.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="parallax-container" id="taller1">
+                <p>Taller 5. Funciones. PSeInt.<br></p>
+                <div class="parallax"><img src="images/blue_neon.jpeg"></div>
+            </div>
+        </header>
+        <nav>
+            <ul class="tabs">
+                <li class="tab col s3"><a id="back" onclick="window.history.back()">Ir a Página Principal</a></li>
+            </ul>
+        </nav>
+        <main>
+            <ul class="collection">
+                <li class="collection-item">
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Taller 5. Funciones.</span>  
+                                  <span class="card-title">Punto1. Pasar de Condicionales a Funciones.</span>  
+                                  <span class="card-title">Ejercicio 1</span>
+                                  <p>1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+                                </div>
+                                <div class="card-action" id="code1">
+                                    <pre>
+                                        <code>
+                                            SubProceso dato <- ingresa_edad()
+                                                Definir dato Como Entero;
+                                                Escribir "Por favor, indique su edad: ";
+                                                Leer dato;	
+                                                Si dato>=18 Entonces
+                                                    Escribir "Usted es mayor de edad.";
+                                                    
+                                                FinSi
+                                            FinSubProceso
+
+                                            Proceso mayor_edad
+                                                Definir edad Como Entero;
+                                                edad <- ingresa_edad();
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 2</span>
+                                  <p>2.Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+                                </div>
+                                <div class="card-action" id="code2">
+                                    <pre>
+                                        <code>
+                                            SubProceso dato <- ingresa_edad()
+	
+                                                Definir dato Como Entero;
+                                                Escribir "Por favor, indique su edad.";
+                                                Leer dato;	
+                                                
+                                                Si dato<18 Entonces
+                                                    Escribir "Usted es un niño.";		
+                                                FinSi
+                                            FinSubProceso
+
+
+                                            Proceso menor_edad
+
+                                                Definir edad Como Entero;
+                                                edad <- ingresa_edad();
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 3</span>
+                                  <p>3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p>
+                                </div>
+                                <div class="card-action" id="code31">
+                                    <pre>
+                                        <code>
+                                            SubProceso edad <- ingresa_edad()
+
+                                                Definir edad Como Entero;
+
+                                            FinSubProceso
+
+                                            SubProceso nombre_completo <- ingresa_nombre()
+
+                                                Definir nombre_completo Como Caracter;
+                                                Definir edad Como Entero;
+
+                                                Escribir "Por favor, indique su nombre completo. ";
+                                                Leer nombre_completo;	
+
+                                                Escribir "Por favor, indique su edad.";
+                                                Leer edad;
+                                                
+                                                Si edad >= 18 Entonces
+
+                                                    Escribir nombre_completo," ","usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+                                                SiNo
+                                                    Escribir nombre_completo," ","usted es menor de edad, por lo tanto no puede entrar a la fiesta. Por favor, devuélvase para su casa.";
+                                                    
+                                                FinSi
+
+                                            FinSubProceso
+
+                                            Proceso edad_fiesta
+
+                                                Definir nombre_completo Como Caracter;
+                                                Definir edad Como Entero;
+                                                nombre_completo <- ingresa_nombre();
+                                                edad <- ingresa_edad();                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 4</span>
+                                  <p>4. La videotienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+                                </div>
+                                <div class="card-action" id="code41">
+                                    <pre>
+                                        <code>
+                                            SubProceso mostrar(EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4)
+
+                                                Si EstadoPeli1="Disponible" Entonces
+                                                    Escribir Peli1;
+                                                FinSi
+
+                                                Si EstadoPeli2="Disponible" Entonces
+                                                    Escribir Peli2;
+                                                FinSi
+
+                                                Si EstadoPeli3="Disponible" Entonces
+                                                    Escribir Peli3;
+                                                FinSi
+
+                                                Si EstadoPeli4="Disponible" Entonces
+                                                    Escribir Peli4;
+                                                FinSi
+
+                                                Escribir "";
+                                            FinSubProceso
+
+                                            SubProceso EstadoPeli <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4)
+                                                Definir EstadoPeli Como Caracter;
+
+                                                Si alquilar=Peli1 Entonces
+
+                                                    Si EstadoPeli1 = "No disponible" Entonces
+                                                        EstadoPeli <- "Disponible";
+                                                        Escribir "Se ha registrado la devolución de forma correcta";
+                                                    SiNo
+                                                        EstadoPeli <- "No disponible";
+                                                        Escribir "Se ha registrado el alquiler de forma correcta";
+                                                    FinSi
+
+                                                FinSi
+
+                                                Si alquilar=Peli2 Entonces
+
+                                                    Si EstadoPeli2 = "No disponible" Entonces
+                                                        EstadoPeli <- "Disponible";
+                                                        Escribir "Se ha registrado la devolución de forma correcta";
+                                                    SiNo
+                                                        EstadoPeli <- "No disponible";
+                                                        Escribir "Se ha registrado el alquiler de forma correcta";
+                                                    FinSi
+
+                                                FinSi
+
+                                                Si alquilar=Peli3 Entonces
+
+                                                    Si EstadoPeli3 = "No disponible" Entonces
+                                                        EstadoPeli <- "Disponible";
+                                                        Escribir "Se ha registrado la devolución de forma correcta";
+                                                    SiNo
+                                                        EstadoPeli <- "No disponible";
+                                                        Escribir "Se ha registrado el alquiler de forma correcta";
+                                                    FinSi
+
+                                                FinSi
+
+                                                Si alquilar=Peli4 Entonces
+
+                                                    Si EstadoPeli4 = "Alquilada" Entonces
+                                                        EstadoPeli <- "Disponible";
+                                                        Escribir "Se ha registrado la devolución de forma correcta";
+                                                    SiNo
+                                                        EstadoPeli <- "Alquilada";
+                                                        Escribir "Se ha registrado el alquiler de forma correcta";
+                                                    FinSi
+
+                                                FinSi
+                                                
+                                            FinSubProceso
+
+                                            Proceso alquiler_peliculas
+                                                
+                                                Definir Peli1 Como Caracter;
+                                                Definir EstadoPeli1 Como Caracter;
+                                                Definir Peli2 Como Caracter;
+                                                Definir EstadoPeli2 Como Caracter;
+                                                Definir Peli3 Como Caracter;
+                                                Definir EstadoPeli3 Como Caracter;
+                                                Definir Peli4 Como Caracter;
+                                                Definir EstadoPeli4 Como Caracter;
+                                                Definir opcion como entero;
+                                                Definir alquilar Como Caracter;
+                                                Definir devolver Como Caracter;
+                                                Definir AnotacionesPeli1 Como Caracter;
+                                                Definir AnotacionesPeli2 Como Caracter;
+                                                Definir AnotacionesPeli3 Como Caracter;
+                                                Definir AnotacionesPeli4 Como Caracter;
+                                                Definir a Como Entero;
+                                                
+                                                Peli1 <- "Matrix Resurrección";
+                                                EstadoPeli1 <- "Disponible";
+                                                Peli2 <- "Sonic 2";
+                                                EstadoPeli2 <- "Alquilada";
+                                                Peli3 <- "Operation Overload";
+                                                EstadoPeli3 <- "Disponible";
+                                                Peli4 <- "Encanto";
+                                                EstadoPeli4 <- "Disponible";
+                                                
+                                                Escribir " ";
+                                                Escribir "             ******* Club de Alquiler de Películas Suba *******";
+                                                Escribir "                         ******* Bienvenido *******";
+                                                Escribir " ";
+                                                Escribir "Las películas disponibles son las siguientes:";
+                                                mostrar(EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                Escribir "Indique su opción";
+                                                Escribir " ";
+                                                Escribir "1. Alquilar una película";
+                                                Escribir "2. Devolver una película";
+                                                Leer opcion;
+                                                
+                                                Segun opcion Hacer
+                                                    1: 
+                                                        Escribir "¿Qué película quiere ver?" Sin Saltar;
+                                                        leer alquilar;
+                                                        a <- 0;
+
+                                                        Si alquilar=Peli1 Entonces                                                        
+                                                            EstadoPeli1 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                        FinSi
+
+                                                        Si alquilar=Peli2 Entonces
+                                                            EstadoPeli1 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                        FinSi
+
+                                                        Si alquilar=Peli3 Entonces
+                                                            EstadoPeli1 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                        FinSi
+
+                                                        Si alquilar=Peli4 Entonces
+                                                            EstadoPeli1 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                        FinSi
+
+                                                        Si alquilar <> Peli1 Y alquilar <> Peli2 Y alquilar <> Peli3 Y alquilar <> Peli4 Entonces
+                                                            Escribir "La película no está disponible.";	
+                                                        FinSi
+                                                        
+                                                    2:
+                                                        Escribir "¿Qué película quiere devolver?"  Sin Saltar;
+                                                        leer alquilar;
+                                                        a <- 1;
+
+                                                        Si alquilar=Peli1 Entonces
+                                                            EstadoPeli1 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                            Escribir "Observación";
+                                                            Leer AnotacionesPeli1;
+                                                        FinSi
+
+                                                        Si alquilar=Peli2 Entonces
+                                                            EstadoPeli2 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                            Escribir "Observación";
+                                                            Leer AnotacionesPeli2;
+                                                        FinSi
+
+                                                        Si alquilar=Peli3 Entonces
+                                                            EstadoPeli3 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                            Escribir "Observación";
+                                                            Leer AnotacionesPeli3;
+                                                        FinSi
+
+                                                        Si alquilar=Peli4 Entonces
+                                                            EstadoPeli4 <- Rentar(a,alquilar,EstadoPeli1,EstadoPeli2,EstadoPeli3,EstadoPeli4,Peli1,Peli2,Peli3,Peli4);
+                                                            Escribir "Observación";
+                                                            Leer AnotacionesPeli4;
+                                                        FinSi
+
+                                                        Si alquilar <> Peli1 Y alquilar <> Peli2 Y alquilar <> Peli3 Y alquilar <> Peli4 Entonces
+                                                            Escribir "Esa pelicula no es nuestra";
+                                                        FinSi
+                                                FinSegun
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 5</span>
+                                  <p>5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+                                </div>
+                                <div class="card-action" id="code5">
+                                    <pre>
+                                        <code>
+                                            SubProceso menu(opcion Por Referencia)
+                                                Escribir " ";
+                                                Escribir "                Indique su opción    ";
+                                                Escribir " ";
+                                                Escribir "1. Consultar un producto";
+                                                Escribir "2. Comprar un producto";
+                                                Escribir "3. Devolver un producto";
+                                                Escribir "4. Ver las ventas del dia";
+                                                Leer opcion;
+                                            FinSubProceso
+
+                                            SubProceso consultar (consulta Por Referencia, Producto1, Producto2, Producto3, Producto4)
+                                                Escribir "1. ",Producto1;
+                                                Escribir "2. ",Producto2;
+                                                Escribir "3. ",Producto3;
+                                                Escribir "4. ",Producto4;
+                                                Leer consulta;
+                                            FinSubProceso
+
+                                            SubProceso facturacion(factura Por Referencia,ventasdia Por Referencia,compras,venta)
+
+                                                Si compras = 0 Entonces
+                                                    factura <- factura - venta;
+                                                    Ventasdia <- Ventasdia + factura;
+                                                FinSi
+
+                                                Si compras = 1 Entonces
+                                                    factura <- factura + venta;
+                                                    Ventasdia <- Ventasdia + factura;
+                                                    Escribir "Gracias por su compra";
+                                                FinSi
+
+                                            FinSubProceso
+
+
+                                            Proceso drogueria_miSalud
+                                                
+                                                Definir Producto1 Como Caracter;
+                                                Definir TipoProducto1 Como Caracter;
+                                                Definir PrecioProducto1 Como Entero;
+                                                Definir CantidadProducto1 Como Entero;
+                                                Definir TamanoProducto1 Como Entero;
+                                                
+                                                Definir Producto2 Como Caracter;
+                                                Definir TipoProducto2 Como Caracter;
+                                                Definir PrecioProducto2 Como Entero;
+                                                Definir CantidadProducto2 Como Entero;
+                                                Definir TamanoProducto2 Como Entero;
+                                                
+                                                Definir Producto3 Como Caracter;
+                                                Definir TipoProducto3 Como Caracter;
+                                                Definir PrecioProducto3 Como Entero;
+                                                Definir CantidadProducto3 Como Entero;
+                                                Definir TamanoProducto3 Como Entero;
+                                                
+                                                Definir Producto4 Como Caracter;
+                                                Definir TipoProducto4 Como Caracter;
+                                                Definir PrecioProducto4 Como Entero;
+                                                Definir CantidadProducto4 Como Entero;
+                                                Definir TamanoProducto4 Como Entero;
+                                                
+                                                Producto1 <- "Acetaminofén 500 mg";
+                                                TipoProducto1 <- "grageas";
+                                                PrecioProducto1 <- 7000;
+                                                CantidadProducto1 <- 1;
+                                                TamanoProducto1 <- 15;
+                                                
+                                                Producto2 <- "Ampicilina 500 mg";
+                                                TipoProducto2 <- "cápsulas";
+                                                PrecioProducto2 <- 9000;
+                                                CantidadProducto2 <- 2;
+                                                TamanoProducto2 <- 30;
+                                                
+                                                Producto3 <- "Hidrocodeina + Bitartrato";
+                                                TipoProducto3 <- "jarabe";
+                                                PrecioProducto3 <- 6500;
+                                                CantidadProducto3 <- 3;
+                                                TamanoProducto3 <- 150;
+                                                
+                                                Producto4 <- "Dipirona 10 mg";
+                                                TipoProducto4 <- "grageas";
+                                                PrecioProducto4 <- 3500;
+                                                CantidadProducto4 <- 6;
+                                                TamanoProducto4 <- 20;
+                                                
+                                                Definir consulta Como Entero;
+                                                Definir opcion Como Entero;
+                                                Definir comprar Como Caracter;
+                                                Definir factura Como Entero;
+                                                Definir Ventasdia Como Entero;
+                                                Definir compras Como Entero;
+                                                
+                                                Ventasdia <- 0;
+                                                factura <- 0;
+                                                opcion <- 0;
+                                                consulta <- 0;
+                                                compras <- 1;
+                                                
+                                                Escribir " ";
+                                                Escribir "   ******* Bienvenido a Drogueria Mi Salud *******";
+                                                menu(opcion);
+                                                
+                                                Segun opcion Hacer
+                                                    1: 	
+                                                        Escribir "¿Qué producto desea consultar?";
+                                                        consultar(consulta, Producto1, Producto2, Producto3, Producto4);
+                                                        compras <- 1;
+
+                                                        Segun consulta Hacer
+                                                            1: Escribir "El producto ", Producto1, " es de tipo ", TipoProducto1, ", la cual viene en una caja de ", TamanoProducto1, " unidades y existen ", CantidadProducto1, " en nuestro inventario";
+                                                                Escribir "Su valor es de: $", PrecioProducto1;
+                                                                Escribir "Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto1);
+                                                                FinSi
+
+                                                            2: Escribir "El producto ", Producto2, " es de tipo ", TipoProducto2, ", el cual viene en un tamaño de ", TamanoProducto2, " y existen ", CantidadProducto2, " en nuestro inventario";
+                                                                Escribir "Su valor es de: $", PrecioProducto2;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto2);
+                                                                FinSi
+
+                                                            3: Escribir "El producto ", Producto3, " es de tipo ", TipoProducto3, ", el cual viene en un tamaño de ", TamanoProducto2, " ml y existen ", CantidadProducto3, " en nuestro inventario";
+                                                                Escribir "Su valor es de: $", PrecioProducto3;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto3);
+                                                                FinSi
+
+                                                            4: Escribir "El producto ", Producto4, " es de tipo ", TipoProducto4, ", el cual viene en un tamaño de ", TamanoProducto2, " y existen ", CantidadProducto4, " en nuestro inventario";
+                                                                Escribir "Su valor es de: $", PrecioProducto4;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto4);
+                                                                FinSi
+
+                                                        FinSegun
+                                                    2:
+                                                        Escribir "¿Que producto desea comprar";
+                                                        consultar(consulta, Producto1, Producto2, Producto3, Producto4);
+                                                        compras <- 1;
+                                                        Segun consulta Hacer
+                                                            1: 
+                                                                Escribir "Su valor es de: $", PrecioProducto1;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto1);
+                                                                FinSi
+
+                                                            2: 
+                                                                Escribir "Su valor es de: $", PrecioProducto2;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto2);
+                                                                FinSi
+
+                                                            3: 
+                                                                Escribir "Su valor es de: $", PrecioProducto3;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto3);
+                                                                FinSi
+
+                                                            4: 
+                                                                Escribir "Su valor es de: $", PrecioProducto4;
+                                                                Escribir "¿Desea comprarlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto4);
+                                                                FinSi
+
+                                                        FinSegun
+                                                    3: 
+                                                        Escribir "¿Qué producto desea devolver?";
+                                                        consultar(consulta, Producto1, Producto2, Producto3, Producto4);
+                                                        compras <- 0;
+                                                        Segun consulta Hacer
+                                                            1: 
+                                                                Escribir "Su valor es de: $", PrecioProducto1;
+                                                                Escribir "¿Desea devolverlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto1);
+                                                                FinSi
+
+                                                            2: 
+                                                                Escribir "Su valor es de: $", PrecioProducto2;
+                                                                Escribir "¿Desea devolverlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto2);
+                                                                FinSi
+
+                                                            3: 
+                                                                Escribir "Su valor es de: $", PrecioProducto3;
+                                                                Escribir "¿Desea devolverlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto3);
+                                                                FinSi
+
+                                                            4: 
+                                                                Escribir "Su valor es de: $", PrecioProducto4;
+                                                                Escribir "¿Desea devolverlo?";
+                                                                Leer comprar;
+
+                                                                Si comprar = "si" Entonces
+                                                                    facturacion(factura,ventasdia,compras,PrecioProducto4);
+                                                                FinSi
+
+                                                        FinSegun
+                                                    4:
+                                                        Escribir "El dia de hoy se han vendido un total de $",Ventasdia; 
+                                                FinSegun                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 6</span>
+                                  <p>6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+                                </div>
+                                <div class="card-action" id="code6">
+                                    <pre>
+                                        <code>
+                                            SubProceso propietario <- Capturarnombre()
+                                                Definir propietario Como Caracter;
+                                                Escribir "Indique nombres y apellidos";
+                                                Leer propietario;
+                                            FinSubProceso
+                                            SubProceso coment(observaciones Por Referencia, Comentarios Por Referencia,com)
+
+                                                Si com=1 Entonces
+                                                    Escribir "Ingrese observaciones";
+                                                    Leer observaciones;
+                                                FinSi
+
+                                                Si com=0 Entonces
+                                                    Escribir "Ingrese los comentarios del dueño ";
+                                                    Leer Comentarios;
+                                                FinSi
+
+                                            FinSubProceso
+
+                                            Proceso taller_motos
+                                                Definir opcion Como Entero;
+                                                Definir Propietario Como Caracter;
+                                                Definir Servicio Como Caracter;
+                                                Definir Comentarios Como Caracter;
+                                                Definir Arreglos Como Caracter;
+                                                Definir Repuestos Como Caracter;
+                                                Definir observaciones Como Caracter;
+                                                Definir com Como Entero;
+                                                observaciones <- "";
+                                                Comentarios <- "";
+                                                com <- 0;
+                                                
+                                                Escribir " ";
+                                                Escribir "         *********** Taller de Motos El Maquinista ***********";
+                                                Escribir " ";
+                                                Escribir "                       ******* Bienvenido *******";
+                                                Escribir " ";
+                                                Escribir "Indique su opción";
+                                                Escribir "1. Ingresar un Revisión";
+                                                Escribir "2. Retirar Moto";
+                                                Leer opcion;
+                                                Segun opcion Hacer
+                                                    1: 
+                                                        com <- 0;
+                                                        Propietario <- Capturarnombre();
+                                                        Escribir "Indique servicio solicitado: ";
+                                                        Leer Servicio;
+                                                        coment(observaciones, Comentarios,com);
+                                                        Escribir "La motocicleta a nombre del señor(a) ",Propietario, " se le realizará el servicio ",Servicio,". Tener en cuenta: ",Comentarios;
+                                                    2:
+                                                        com <- 1;
+                                                        Propietario <- Capturarnombre();
+                                                        Escribir "Describa los arreglos que se realizaron";
+                                                        Leer Arreglos;
+                                                        Escribir "Describa los repuestos utilizados";
+                                                        Leer Repuestos;
+                                                        coment(obsevaciones, Comentarios,com);
+                                                        Escribir "La motocicleta a nombre del señor(a) ",Propietario,"Se le realizó el servicio ",Arreglos," y se utilizaron los siguiente respuesto: ",Repuestos, ". Tener cuidado con: ",recomendaciones;
+                                                FinSegun
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">  
+                                  <span class="card-title">Ejercicio 7</span>
+                                  <p>7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+                                </div>
+                                <div class="card-action" id="code7">
+                                    <pre>
+                                        <code>
+                                            SubProceso Mensajeestado(nombre,IMC,estado Por Referencia)
+	
+                                                Definir peso Como Caracter;
+                                                
+                                                si IMC < 18.5 Entonces
+                                                    peso <- "por debajo de lo recomendado.";
+                                                FinSi
+                                                si IMC< 24.9 Y IMC >= 18.5 Entonces
+                                                    peso <- "normal.";
+                                                FinSi
+                                                si IMC< 29.9 Y IMC >= 24.9 Entonces
+                                                    peso <- "por encima de lo recomendado.";
+                                                FinSi
+                                                si IMC >= 30.0 Entonces
+                                                    peso <- "muy por encima de lo recomendado.";
+                                                FinSi
+                                                
+                                                Escribir " Usuario(a) ",nombre," su índice de masa corporal es de ",IMC, " lo cual indica que su peso está ", peso;
+                                            FinSubProceso
+
+                                            Proceso indice_masa_corporal
+                                                Definir nombre Como Caracter;
+                                                Definir estatura Como Real;
+                                                Definir peso Como Real;
+                                                Definir IMC Como Real;
+                                                Definir estado Como Caracter;
+                                                
+                                                
+                                                Escribir "Indique su nombre: ";
+                                                Leer nombre;
+                                                Escribir "Indique la estatura: ";
+                                                Leer estatura;
+                                                Escribir "Indique el peso en Kg:";
+                                                Leer peso;
+                                                IMC <- peso/(estatura^2);
+                                                Mensajeestado(nombre,IMC,peso);
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 8</span>
+                                  <p>8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+                                </div>
+                                <div class="card-action" id="code81">
+                                    <pre>
+                                        <code>
+                                            SubProceso menu(option Por Referencia)
+	
+                                                Escribir " ";
+                                                Escribir "       ***********  Pastelería Don Carlos  ***********";
+                                                Escribir " ";
+                                                Escribir "                 ******* Bienvenidos *******";
+                                                Escribir " ";
+                                                Escribir "Indique su opción:";
+                                                Escribir " ";
+                                                Escribir "1. Registrar una Venta";
+                                                Escribir "2. Total vendidas en el día";
+                                                Leer option;
+                                            FinSubProceso
+
+                                            SubProceso menu2(cantidaddispotor1 Por Referencia,cantidaddispotor2 por referencia,cantidaddispotor3 Por Referencia,seleccion Por Referencia,sabortorta1,sabortorta2,sabortorta3,n Por Referencia,comparar Por Referencia)
+                                                Escribir "Indique qué torta desea llevar:";
+                                                Escribir "";
+                                                si cantidaddispotor1 > 0 Entonces
+                                                    Escribir n,". ",Sabortorta1, " con una cantidad de ",cantidaddispotor1," unidades en el inventario";
+                                                    n<-n+1;
+                                                FinSi
+                                                si cantidaddispotor2 > 0 Entonces
+                                                    Escribir n,". ",Sabortorta2, " con una cantidad de ",cantidaddispotor2," unidades en el inventario";
+                                                    n<-n+1;
+                                                FinSi
+                                                si cantidaddispotor3 > 0 Entonces
+                                                    Escribir n,". ",Sabortorta3, " con una cantidad de ",cantidaddispotor3," unidades en el inventario";
+                                                    n<-n+1;
+                                                FinSi
+                                                Escribir "";
+                                                Escribir "Indique su opción:";
+                                                Leer seleccion;
+                                                si cantidaddispotor1 > 0 Entonces
+                                                    comparar <- 1;
+                                                    si seleccion =comparar Entonces
+                                                        cantidaddispotor1 <- cantidaddispotor1 -1;
+                                                        Escribir "Compra hecha";
+                                                    FinSi
+                                                FinSi
+                                                si cantidaddispotor2 > 0 Entonces
+                                                    comparar <- 2;
+                                                    si seleccion =comparar Entonces
+                                                        cantidaddispotor3 <- cantidaddispotor2 -1;
+                                                        Escribir "Compra hecha";
+                                                    FinSi
+                                                FinSi
+                                                si cantidaddispotor3 > 0 Entonces
+                                                    comparar <- 3;
+                                                    si seleccion =comparar Entonces
+                                                        cantidaddispotor3 <- cantidaddispotor3 -1;
+                                                        Escribir "Compra hecha";
+                                                    FinSi
+                                                FinSi
+                                            FinSubProceso
+
+                                            Proceso pasteleria
+                                                
+                                                Definir Sabortorta1 Como Caracter;
+                                                Definir Sabortorta2 Como Caracter;
+                                                Definir Sabortorta3 Como Caracter;
+                                                Sabortorta1 <- "Marqueza";
+                                                Sabortorta2 <- "Maracuyá";
+                                                Sabortorta3 <- "Lulo";
+                                                
+                                                Definir Porcioonestorta1 Como Entero;
+                                                Definir Porcioonestorta2 Como Entero;
+                                                Definir Porcioonestorta3 Como Entero;
+                                                Porcioonestorta1 <- 6;
+                                                Porcioonestorta2 <- 12;
+                                                Porcioonestorta3 <- 6;
+                                                
+                                                Definir cantidaddispotor1 Como Entero;
+                                                Definir cantidaddispotor2 Como Entero;
+                                                Definir cantidaddispotor3 Como Entero;
+                                                Definir cantidaddispotor1ini Como Entero;
+                                                Definir cantidaddispotor2ini Como Entero;
+                                                Definir cantidaddispotor3ini Como Entero;
+                                                cantidaddispotor1 <- 3;
+                                                cantidaddispotor1ini <- 3;
+                                                cantidaddispotor2 <- 8;
+                                                cantidaddispotor2ini <- 8;
+                                                cantidaddispotor3 <- 11;
+                                                cantidaddispotor3ini <- 11;
+                                                
+                                                Definir NumDecoracionestorta1 Como Entero;
+                                                Definir NumDecoracionestorta2 Como Entero;
+                                                Definir NumDecoracionestorta3 Como Entero;
+                                                
+                                                NumDecoracionestorta1 <- 2;
+                                                NumDecoracionestorta2 <- 4;
+                                                NumDecoracionestorta3 <- 4;
+                                                
+                                                Definir cantidadventasdiaSabor1 Como Entero;
+                                                
+                                                Definir option Como Entero;
+                                                Definir seleccion Como Entero;
+                                                option <- 0;
+                                                seleccion <- 0;
+                                                
+                                                Definir n Como Entero;
+                                                Definir comparar Como Entero;
+                                                comparar<-0;
+                                                n<-1;
+                                                menu(option);
+                                                Segun option Hacer
+                                                    1: 
+                                                        menu2(cantidaddispotor1,cantidaddispotor2,cantidaddispotor3,seleccion,sabortorta1,sabortorta2,sabortorta3,n,comparar);
+                                                        
+                                                    2:
+                                                        Escribir "Se han vendido ", cantidaddispotor1ini-cantidaddispotor1, " unidades de tortas de ",Sabortorta1;
+                                                        Escribir "Se han vendido ", cantidaddispotor2ini-cantidaddispotor2, " unidades de tortas de ",Sabortorta2;
+                                                        Escribir "Se han vendido ", cantidaddispotor3ini-cantidaddispotor3, " unidades de tortas de ",Sabortorta3;
+                                                FinSegun
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">  
+                                  <span class="card-title">Ejercicio 9</span>
+                                  <p>9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+                                </div>
+                                <div class="card-action" id="code9">
+                                    <pre>
+                                        <code>
+                                            SubProceso menu()
+                                                Escribir "  													 ";
+                                                Escribir "    ***********  Cálculo del área de figuras geométricas ***********";
+                                                Escribir "  													 ";
+                                                Escribir "                  ***********  Bienvenido  ***********";
+                                                Escribir " ";
+                                                Escribir "¿Sobre qué figura va a hacer el cáculo? Indique su opción.";
+                                                Escribir "1. Rectángulo";
+                                                Escribir "2. Triángulo";
+                                                Escribir "3. Trapecio";
+                                                Escribir "4. Salir";	
+                                            FinSubProceso
+
+                                            Subproceso calculo(num1,num2,option,num3)
+                                                Definir Area Como Real;
+                                                Si option = 1 Entonces
+                                                    Area <- num1*mun2;
+                                                    Escribir "     /////// Área del rectángulo = ", Area," cm2 ///////";
+                                                    Escribir " ";
+                                                FinSi
+                                                Si option = 2 Entonces
+                                                    Area <- num1*num2/2;
+                                                    Escribir "     /////// Área del triángulo = ", Area," cm2 ///////";
+                                                    Escribir " ";
+                                                FinSi
+                                                Si option = 3 Entonces
+                                                    Area <- (num1+num2)*num3/2;
+                                                    Escribir "     /////// Área del trapecio = ", Area," cm2 ///////";
+                                                    Escribir " ";
+                                                FinSi}
+                                            FinSubProceso
+
+                                            Proceso app_area_geometria
+                                                
+                                                Definir opcion Como Entero;
+                                                Definir ladolargo Como Entero;
+                                                Definir ladocorto Como Entero;
+                                                Definir base Como Entero;
+                                                Definir altura Como Entero;
+                                                Definir basemenor Como Entero;
+                                                Definir basemayor Como Entero;
+                                                
+                                                menu();
+                                                Leer opcion;
+                                                Segun opcion Hacer
+                                                    1: 
+                                                        Escribir "Indique la base del rectángulo (cm)";
+                                                        Leer ladolargo;
+                                                        Escribir "Indique la altura del rectángulo (cm)";
+                                                        Leer ladocorto;
+                                                        calculo(ladolargo,ladocorto,opcion,0);
+                                                    2: 
+                                                        Escribir "Indique la altura del triángulo (cm)";
+                                                        Leer altura;
+                                                        Escribir "Indique la base del triángulo (cm)";	
+                                                        Leer base;
+                                                        
+                                                        calculo(base,altura,opcion,0);
+                                                    3: 
+                                                        Escribir "Indique la altura del trapecio (cm)";
+                                                        Leer altura;
+                                                        Escribir "Indique la base inferior del trapecio (cm)";
+                                                        Leer ladocorto;
+                                                        Escribir "Indique la base superior del trapecio (cm)";
+                                                        Leer ladolargo;
+                                                            
+                                                        calculo(ladolargo,ladocorto,opcion,altura);
+                                                    4:
+                                                        Escribir "                                              ";
+                                                        Escribir "       ******* ¡No olvides practicar! ¡Vuelve pronto! *******";
+                                                        Escribir "                                              ";
+                                                    De Otro Modo:
+                                                        Escribir "                                              ";
+                                                        Escribir "       ******* Opción incorrecta. Intenta de nuevo. *******";                                                    
+                                                FinSegun
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">  
+                                  <span class="card-title">Ejercicio 10</span>
+                                  <p>10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+                                </div>
+                                <div class="card-action" id="code10">
+                                    <pre>
+                                        <code>
+                                            SubProceso dato <- solicitarDatos(mensaje)
+                                                Definir dato Como Caracter;
+                                                Escribir mensaje, Sin Saltar;
+                                                Leer dato;
+                                            FinSubProceso
+
+                                            SubProceso opcion <- menu()
+                                                Definir opcion Como Entero;
+                                                Escribir " ";
+                                                Escribir "                       *********** Banco Fiel ***********";
+                                                Escribir " ";
+                                                Escribir "                           ******* Bienvenido *******";
+                                                Escribir " ";
+                                                Escribir "Seleccione una Opción";
+                                                Escribir "	";
+                                                Escribir "1. Hacer una consignación";
+                                                Escribir "2. Realizar retiro";
+                                                Escribir "3. Consulta de saldo";
+                                                Escribir "4. Salir";
+                                                Leer opcion;
+                                            FinSubProceso
+
+                                            SubProceso LlenarDatos(clientes Por Referencia )
+                                                Definir i Como Entero;
+                                                Definir cliente, identificacion, saldo Como Caracter;
+                                                Para i<-0 Hasta 9 Con Paso 1 Hacer
+                                                    cliente <- ConvertirATexto(i+1);
+                                                    identificacion <- cliente;
+                                                    saldo <- ConvertirATexto((i+1)*10000);
+                                                    clientes[i,0] <- Concatenar('cliente ', cliente);
+                                                    clientes[i,1] <- identificacion;
+                                                    clientes[i,2] <- saldo;
+                                                FinPara
+                                            FinSubProceso
+
+                                            SubProceso saldo <- ConsultarProducto()
+                                                Definir existe Como Logico;
+                                                Definir saldo, cConsultado, clientes, cliente Como Caracter;
+                                                Definir  i, j Como Entero;
+                                                Dimension clientes[10,3];
+                                                existe<- Falso;
+                                                cConsultado<-"";
+                                                saldo<-"";
+                                                cliente <- solicitarDatos("Indique número de identificación del cliente: ");
+                                                LlenarDatos(clientes);
+                                                Para i<-0 Hasta 9 Con Paso 1 Hacer
+                                                    para j<-0 Hasta 2 Con Paso 1 Hacer
+                                                        Si cliente = clientes[i,1] Entonces
+                                                            existe <- Verdadero;
+                                                            cConsultado <- clientes[i,2];
+                                                        FinSi
+                                                    FinPara
+                                                FinPara
+                                                Si existe = Falso Entonces
+                                                    Escribir "Número de identificación no registrado.";
+                                                FinSi
+                                                saldo <- cConsultado;
+                                            FinSubProceso
+
+                                            SubProceso Consignar()
+                                                Definir saldonum, cantidadnum, nuevosaldo Como Entero;
+                                                Definir saldo, cantidad Como Caracter;
+                                                saldo <- ConsultarProducto();
+                                                saldonum <- ConvertirANumero(saldo);
+                                                Si saldo <>"" Entonces
+                                                    cantidad <- solicitarDatos("Indique cantidad a consignar: ");
+                                                    cantidadnum <- ConvertirANumero(cantidad);
+                                                    Si cantidadnum <= 0 Entonces
+                                                        Escribir "Por favor, indique un monto válido.";
+                                                    SiNo
+                                                        nuevosaldo <- saldonum + cantidadnum;
+                                                        Escribir "Consignación realizada con éxito, su nuevo saldo es de: $", nuevosaldo;
+                                                    FinSi
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso Retirar()
+                                                Definir saldonum, cantidadnum, nuevosaldo Como Entero;
+                                                Definir saldo, cantidad Como Caracter;
+                                                saldo <- ConsultarProducto();
+                                                saldonum <- ConvertirANumero(saldo);
+                                                Si saldo <>"" Entonces
+                                                    cantidad <- solicitarDatos("Indique la cantidad a retirar: ");
+                                                    cantidadnum <- ConvertirANumero(cantidad);
+                                                    Si cantidadnum > saldonum Entonces
+                                                        Escribir "La cantidad solicitada es superior al saldo disponible. Verifique su saldo.";
+                                                    SiNo
+                                                        nuevosaldo <- saldonum - cantidadnum;
+                                                        Escribir "Retiro realizado con éxito, su nuevo saldo es de: $", nuevosaldo;
+                                                    FinSi
+                                                FinSi
+                                            FinSubProceso
+
+                                            Proceso banco_fiel
+                                                
+                                                Definir opcion Como Entero;
+                                                Definir existe Como Logico;
+                                                Definir saldo Como Caracter;
+                                                
+                                                opcion <- menu();
+                                                
+                                                    Segun opcion Hacer
+                                                    
+                                                    1:
+                                                        Limpiar Pantalla;
+                                                        Consignar();
+                                                    2:
+                                                        Limpiar Pantalla;
+                                                        Retirar();
+                                                    3:
+                                                        Limpiar Pantalla;
+                                                        saldo <- ConsultarProducto();
+                                                        Si saldo <> "" Entonces
+                                                            Escribir "Saldo disponible: $",saldo;
+                                                        FinSi			
+                                                    4:
+                                                        Escribir "Hasta luego";
+                                                    De Otro Modo:
+                                                        Escribir "Opción invalida.";
+                                                        
+                                                    
+                                                FinSegun
+                                                    
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Punto 2. Organizar los puntos 6, 7 y 8 del taller de ciclos en modo funciones.</span>  
+                                  <span class="card-title">Ejercicio 6</span>
+                                  <p>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+                                </div>
+                                <div class="card-action" id="code11">
+                                    <pre>
+                                        <code>
+                                            SubProceso menu()	
+                                                Escribir "Menú principal";
+                                                Escribir "Seleccione una opción";
+                                                Escribir "1. Agregar contacto (Solo podrá agreegar 3 contactos)";
+                                                Escribir "2. Eliminar contacto";;
+                                                Escribir "3. Salir del programa";
+                                            FinSubProceso
+
+                                            SubProceso registrarnombre(nombre1 Por Referencia,nombre2 Por Referencia,nombre3 Por Referencia,contador Por Referencia,Repetirnombre Por Referencia)
+                                                Definir nombreTemp Como Caracter;
+                                                Escribir "Indique el nombre del contacto de desea registrar";
+                                                Leer nombreTemp;
+                                                Si nombreTemp <> nombre1 Y nombreTemp <> nombre2 Y nombreTemp <> nombre3 Entonces
+                                                    Si contador =0 Entonces
+                                                        nombre1 <- NombreTemp;
+                                                        Repetirnombre <- 1;
+                                                    FinSi
+                                                    Si contador =1 Entonces
+                                                        nombre2 <- NombreTemp;
+                                                        Repetirnombre <- 1;
+                                                    FinSi
+                                                    Si contador =2 Entonces
+                                                        nombre3 <- NombreTemp;
+                                                        Repetirnombre <- 1;
+                                                    FinSi
+                                                SiNo
+                                                    Escribir "Contacto ya existe";
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso registrarnumero(Telefono1 Por Referencia, Telefono2 Por Referencia, Telefono3 Por Referencia, contador Por Referencia, Repetirnumero Por Referencia)
+                                                Definir TelefonoTemp Como Caracter;
+                                                Escribir "Indique el número telefónico del contacto";
+                                                Leer TelefonoTemp;
+                                                Si TelefonoTemp <> Telefono1 Y TelefonoTemp <> Telefono2 Y TelefonoTemp <> Telefono3 Entonces
+                                                    Si contador =0 Entonces
+                                                        Telefono1 <- TelefonoTemp;
+                                                        Repetirnumero <- 1;
+                                                        Escribir "Número ingresado con éxito";
+                                                        Escribir " ";
+                                                    FinSi
+                                                    Si contador =1 Entonces
+                                                        Telefono2 <- TelefonoTemp;
+                                                        Repetirnumero <- 1;
+                                                        Escribir "Número ingresado con éxito";
+                                                        Escribir " ";
+                                                    FinSi
+                                                    Si contador =2 Entonces
+                                                        Telefono3 <- TelefonoTemp;
+                                                        Repetirnumero <- 1;
+                                                        Escribir "Número ingresado con éxito";
+                                                        Escribir " ";
+                                                    FinSi
+                                                SiNo
+                                                    Escribir "Contacto ya existe";
+                                                    Escribir "";
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso Mostrarnumeros(contador, nombre1, nombre2, nombre3,Telefono1, Telefono2, Telefono3)
+                                                Escribir "Estos son tus contactos registrados: ";
+                                                Si contador=1 Entonces
+                                                    Escribir "1. ",nombre1," ........ ",Telefono1;
+                                                FinSi
+                                                Si contador=2 Entonces
+                                                    Escribir "1. ",nombre1," ........ ",Telefono1;
+                                                    Escribir "2. ",nombre2," ........ ",Telefono2;
+                                                FinSi
+                                                Si contador=3 Entonces
+                                                    Escribir "1. ",nombre1," ........ ",Telefono1;
+                                                    Escribir "2. ",nombre2," ........ ",Telefono2;
+                                                    Escribir "3. ",nombre3," ........ ",Telefono3;
+                                                FinSi
+                                                Si contador<=0 Entonces
+                                                    Escribir "No hay contactos registrados en esta agenda";
+                                                    Escribir "";
+                                                FinSi
+                                                
+                                            FinSubProceso
+
+                                            SubProceso eliminar(contador Por Referencia,nombre1 Por Referencia, nombre2 Por Referencia, nombre3 Por Referencia, Telefono1 Por Referencia, Telefono2 Por Referencia, Telefono3 Por Referencia)
+                                                Definir OpcEliminar Como Entero;
+                                                Leer OpcEliminar;
+                                                Segun OpcEliminar Hacer
+                                                    1: 
+                                                        Si contador = 1 Entonces
+                                                            nombre1 <- "";
+                                                            Telefono1 <- "";
+                                                            Escribir "Número eliminado";
+                                                            Escribir "";
+                                                        FinSi
+                                                        Si contador = 2 Entonces
+                                                            nombre1 <- nombre2;
+                                                            Telefono1 <- Telefono2;
+                                                            nombre2 <- "";
+                                                            Telefono2 <- "";
+                                                            Escribir "Número eliminado";
+                                                            Escribir "";
+                                                        FinSi
+                                                        Si contador = 3 Entonces
+                                                            nombre1 <- nombre2;
+                                                            Telefono1 <- Telefono2;
+                                                            nombre2 <- nombre3;
+                                                            Telefono2 <- Telefono3;
+                                                            nombre3 <- "";
+                                                            Telefono3 <- "";
+                                                            Escribir "Número eliminado";
+                                                            Escribir "";
+                                                        FinSi
+                                                        contador<- contador-1;
+                                                    2:
+                                                        Si contador = 2 Entonces
+                                                            nombre2 <- "";
+                                                            Telefono2 <- "";
+                                                            Escribir "Número eliminado";
+                                                            Escribir "";
+                                                        FinSi
+                                                        Si contador = 2 Entonces
+                                                            nombre2 <- nombre3;
+                                                            Telefono2 <- Telefono3;
+                                                            nombre3 <- "";
+                                                            Telefono3 <- "";
+                                                            Escribir "Número eliminado";
+                                                            Escribir "";
+                                                        FinSi
+                                                        contador <- contador -1;
+                                                    3:
+                                                        nombre3 <- "";
+                                                        Telefono3 <- "";
+                                                        Escribir "Número eliminado";
+                                                        Escribir "";
+                                                        contador <- contador -1;
+                                                        
+                                                FinSegun
+                                            FinSubProceso
+
+                                            Proceso agenda_contactos
+                                                Definir nombre1 Como Caracter;
+                                                Definir nombre2 Como Caracter;
+                                                Definir nombre3 Como Caracter;
+                                                
+                                                Definir Telefono1 Como Caracter;
+                                                Definir Telefono2 Como Caracter;
+                                                Definir Telefono3 Como Caracter;
+                                                
+                                                Definir opcion Como Entero;
+                                                Definir contador Como Entero;
+                                                Definir contador2 Como Entero;
+                                                Definir Repetirnombre Como Entero;
+                                                Definir Repetirnumero Como Entero;
+                                                Definir c Como Entero;
+                                                
+                                                c <- 0;
+                                                nombre1 <- " ";
+                                                nombre2 <- " ";
+                                                nombre3 <- " ";
+                                                Telefono1 <- " ";
+                                                Telefono2 <- " ";
+                                                Telefono3 <- " ";
+                                                contador <- 0;
+                                                
+                                                Repetir
+                                                    menu();
+                                                    Leer opcion;
+                                                    Segun opcion Hacer
+                                                        1:
+                                                            Repetirnombre<-0;
+                                                            Repetir
+                                                                registrarnombre(nombre1,nombre2,nombre3,contador,Repetirnombre);
+                                                            Hasta Que Repetirnombre =1;
+                                                            Repetirnumero <- 0;
+                                                            Repetir
+                                                                registrarnumero(Telefono1, Telefono2, Telefono3, contador, Repetirnumero);
+                                                            Hasta Que Repetirnumero = 1
+                                                            contador <- contador + 1;
+                                                        2:
+                                                            Mostrarnumeros(contador, nombre1, nombre2, nombre3,Telefono1, Telefono2, Telefono3);
+                                                            Si contador > 0 Entonces
+                                                                Escribir "¿Qué número desea eliminar?";	
+                                                                eliminar(contador, nombre1, nombre2, nombre3, Telefono1, Telefono2, Telefono3);
+                                                            FinSi
+                                                        3:
+                                                            c <- 1;
+                                                    FinSegun
+                                                Hasta Que c=1;
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">  
+                                  <span class="card-title">Ejercicio 7</span>
+                                  <p>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+                                </div>
+                                <div class="card-action" id="code12">
+                                    <pre>
+                                        <code>
+                                            SubProceso menu()
+                                                Escribir "               *********** Parqueadero El Guardian ***********";
+                                                Escribir " ";
+                                                Escribir "                          ******* Bienvenido *******";
+                                                Escribir " ";
+                                                Escribir "   /////// Elija su opción ///////";
+                                                Escribir " ";
+                                                Escribir "1. Registrar ingreso de vehículo";
+                                                Escribir "2. Registro de salida de vehículo";
+                                                Escribir "3. Consultar vehículos";
+                                                Escribir "4. Salir";
+                                            FinSubProceso
+
+                                            SubProceso IngresarPlaca(contador,Placa1 Por Referencia,Placa2 Por Referencia,Placa3 Por Referencia,Placa4 Por Referencia)
+                                                Definir PlacaTemp Como Caracter;
+                                                Escribir "Indique la placa del vehículo";
+                                                Leer PlacaTemp;
+                                                Si contador =0 Entonces
+                                                    Placa1 <- PlacaTemp;
+                                                FinSi
+                                                Si contador =1 Entonces
+                                                    Placa2 <- PlacaTemp;
+                                                FinSi
+                                                Si contador =2 Entonces
+                                                    Placa3 <- PlacaTemp;
+                                                FinSi
+                                                Si contador =3 Entonces
+                                                    Placa4 <- PlacaTemp;
+                                                FinSi
+                                                Si contador =4 Entonces
+                                                    Placa5 <- PlacaTemp;
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso IngresarMarca(contador,marca1 Por Referencia,marca2 Por Referencia,marca3 Por Referencia,marca4 Por Referencia)
+                                                Escribir "Indique la marca del vehículo";
+                                                Si contador =0 Entonces
+                                                    Leer marca1;
+                                                FinSi
+                                                Si contador =1 Entonces
+                                                    Leer marca2;
+                                                FinSi
+                                                Si contador =2 Entonces
+                                                    Leer marca3;
+                                                FinSi
+                                                Si contador =3 Entonces
+                                                    Leer marca4;
+                                                FinSi
+                                                Si contador =4 Entonces
+                                                    Leer marca5;
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso IngresarDueno(contador,Nombredueno1 Por Referencia,Nombredueno2 Por Referencia,Nombredueno3 Por Referencia,Nombredueno4 Por Referencia)
+                                                Escribir "Indique el nombre del dueño del vehículo";
+                                                Si contador =0 Entonces
+                                                    Leer NombreDueno1;
+                                                FinSi
+                                                Si contador =1 Entonces
+                                                    Leer NombreDueno2;
+                                                FinSi
+                                                Si contador =2 Entonces
+                                                    Leer NombreDueno3;
+                                                FinSi
+                                                Si contador =3 Entonces
+                                                    Leer NombreDueno4;
+                                                FinSi
+                                                Si contador =4 Entonces
+                                                    Leer NombreDueno5;
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso IngresarTelefono(contador,TelefonoDueno1,TelefonoDueno2 Por Referencia,TelefonoDueno3 Por Referencia,TelefonoDueno4 Por Referencia)
+                                                Escribir "Indique teléfono del dueño";
+                                                Si contador =0 Entonces
+                                                    Leer TelefonoDueno1;
+                                                FinSi
+                                                Si contador =1 Entonces
+                                                    Leer TelefonoDueno2;
+                                                FinSi
+                                                Si contador =2 Entonces
+                                                    Leer TelefonoDueno3;
+                                                FinSi
+                                                Si contador =3 Entonces
+                                                    Leer TelefonoDueno4;
+                                                FinSi
+                                                Si contador =4 Entonces
+                                                    Leer TelefonoDueno5;
+                                                FinSi
+                                            FinSubProceso
+
+                                            Proceso parqueadero_elGuradian
+                                                Definir NombreDueno1 Como Caracter;
+                                                NombreDueno1 <-"";
+                                                Definir NombreDueno2 Como Caracter;
+                                                NombreDueno2 <-"";
+                                                Definir NombreDueno3 Como Caracter;
+                                                NombreDueno3 <-"";
+                                                Definir NombreDueno4 Como Caracter;
+                                                NombreDueno4 <-"";
+                                                Definir NombreDueno5 Como Caracter;
+                                                NombreDueno5 <-"";
+                                                
+                                                Definir TelefonoDueno1 Como Caracter;
+                                                TelefonoDueno1 <- "";
+                                                Definir TelefonoDueno2 Como Caracter;
+                                                TelefonoDueno2 <- "";
+                                                Definir TelefonoDueno3 Como Caracter;
+                                                TelefonoDueno3 <- "";
+                                                Definir TelefonoDueno4 Como Caracter;
+                                                TelefonoDueno4 <- "";
+                                                Definir TelefonoDueno5 Como Caracter;
+                                                TelefonoDueno5 <- "";
+                                                
+                                                Definir Placa1 Como Caracter;
+                                                Placa1 <- "";
+                                                Definir Placa2 Como Caracter;
+                                                Placa2 <- "";
+                                                Definir Placa3 Como Caracter;
+                                                Placa3 <- "";
+                                                Definir Placa4 Como Caracter;
+                                                Placa4 <- "";
+                                                Definir Placa5 Como Caracter;
+                                                Placa5 <- "";
+                                                
+                                                Definir marca1 Como Caracter;
+                                                marca1 <- "";
+                                                Definir marca2 Como Caracter;
+                                                marca2 <- "";
+                                                Definir marca3 Como Caracter;
+                                                marca3 <- "";
+                                                Definir marca4 Como Caracter;
+                                                marca4 <- "";
+                                                Definir marca5 Como Caracter;
+                                                marca5 <- "";
+                                                
+                                                Definir c Como Entero;
+                                                Definir opcion Como Entero;
+                                                Definir contador Como Entero;
+                                                Definir OpcEliminar Como Entero;
+                                                
+                                                c <- 0;
+                                                contador <- 0;
+                                                menu();	
+                                                Repetir
+                                                    Leer opcion;
+                                                    Segun opcion Hacer
+                                                        1:
+                                                            IngresarPlaca(contador,Placa1,Placa2,Placa3,Placa4);
+                                                            IngresarMarca(contador,marca1,marca2,marca3,marca4);
+                                                            IngresarDueno(contador,Nombredueno1,Nombredueno2,Nombredueno3,Nombredueno4);
+                                                            IngresarTelefono(contador,TelefonoDueno1,TelefonoDueno2,TelefonoDueno3,TelefonoDueno4);
+                                                            contador <- contador +1;
+                                                        2:
+                                                            Escribir "Vehículos actualmente registrados en el parqueadero: ";
+                                                            Escribir "Indique la placa del vehículo que va a dar salida";
+                                                            Si contador=1 Entonces
+                                                                Escribir "1. ",Placa1;
+                                                            FinSi
+                                                            Si contador=2 Entonces
+                                                                Escribir "1. ",Placa1;
+                                                                Escribir "2. ",Placa2;
+                                                            FinSi
+                                                            Si contador=3 Entonces
+                                                                Escribir "1. ",Placa1;
+                                                                Escribir "2. ",Placa2;
+                                                                Escribir "3. ",Placa3;
+                                                            FinSi
+                                                            Si contador=4 Entonces
+                                                                Escribir "1. ",Placa1;
+                                                                Escribir "2. ",Placa2;
+                                                                Escribir "3. ",Placa3;
+                                                                Escribir "4. ",Placa4;
+                                                            FinSi
+                                                            Si contador=5 Entonces
+                                                                Escribir "1. ",Placa1;
+                                                                Escribir "2. ",Placa2;
+                                                                Escribir "3. ",Placa3;
+                                                                Escribir "4. ",Placa4;
+                                                                Escribir "5. ",Placa5;
+                                                            FinSi
+                                                            Si contador<=0 Entonces
+                                                                Escribir "No hay vehículos ingresados";
+                                                            FinSi
+                                                            Leer OpcEliminar;
+                                                            Segun OpcEliminar Hacer
+                                                                1: 
+                                                                    Si contador = 1 Entonces
+                                                                        NombreDueno1 <- "";
+                                                                        TelefonoDueno1 <- "";
+                                                                        Placa1 <- "";
+                                                                        marca1 <- "";
+                                                                    FinSi
+                                                                    Si contador = 2 Entonces
+                                                                        NombreDueno1 <- NombreDueno2;
+                                                                        TelefonoDueno1 <- TelefonoDueno2;
+                                                                        Placa1 <- Placa2;
+                                                                        marca1 <- marca2;
+                                                                        NombreDueno2 <- "";
+                                                                        TelefonoDueno2 <- "";
+                                                                        Placa2 <- "";
+                                                                        marca2 <- "";
+                                                                    FinSi
+                                                                    Si contador = 3 Entonces
+                                                                        NombreDueno1 <- NombreDueno2;
+                                                                        TelefonoDueno1 <- TelefonoDueno2;
+                                                                        Placa1 <- Placa2;
+                                                                        marca1 <- marca2;
+                                                                        
+                                                                        NombreDueno2 <- NombreDueno3;
+                                                                        TelefonoDueno2 <- TelefonoDueno3;
+                                                                        Placa2 <- Placa3;
+                                                                        marca2 <- marca3;
+                                                                        
+                                                                        NombreDueno3 <- "";
+                                                                        TelefonoDueno3 <- "";
+                                                                        Placa3 <- "";
+                                                                        marca3 <- "";
+                                                                    FinSi
+                                                                    Si contador = 4 Entonces
+                                                                        NombreDueno1 <- NombreDueno2;
+                                                                        TelefonoDueno1 <- TelefonoDueno2;
+                                                                        Placa1 <- Placa2;
+                                                                        marca1 <- marca2;
+                                                                        
+                                                                        NombreDueno2 <- NombreDueno3;
+                                                                        TelefonoDueno2 <- TelefonoDueno3;
+                                                                        Placa2 <- Placa3;
+                                                                        marca2<- marca3;
+                                                                        
+                                                                        NombreDueno3 <- NombreDueno4;
+                                                                        TelefonoDueno3 <- TelefonoDueno4;
+                                                                        Placa3 <- Placa4;
+                                                                        marca3<- marca4;
+                                                                        
+                                                                        NombreDueno4 <- "";
+                                                                        TelefonoDueno4 <- "";
+                                                                        Placa4 <- "";
+                                                                        marca4 <- "";
+                                                                    FinSi
+                                                                    
+                                                                    Si contador = 5 Entonces
+                                                                        NombreDueno1 <- NombreDueno2;
+                                                                        TelefonoDueno1 <- TelefonoDueno2;
+                                                                        Placa1 <- Placa2;
+                                                                        marca1 <- marca2;
+                                                                        
+                                                                        NombreDueno2 <- NombreDueno3;
+                                                                        TelefonoDueno2 <- TelefonoDueno3;
+                                                                        Placa2 <- Placa3;
+                                                                        marca2 <- marca3;
+                                                                        NombreDueno3 <- NombreDueno4;
+                                                                        TelefonoDueno3 <- TelefonoDueno4;
+                                                                        Placa3 <- Placa4;
+                                                                        marca3 <- marca4;
+                                                                        
+                                                                        NombreDueno4 <- NombreDueno5;
+                                                                        TelefonoDueno4 <- TelefonoDueno5;
+                                                                        Placa4 <- Placa5;
+                                                                        marca4 <- marca5;
+                                                                        
+                                                                        NombreDueno5 <- "";
+                                                                        TelefonoDueno5 <- "";
+                                                                        Placa5 <- "";
+                                                                        marca5 <- "";
+                                                                    FinSi
+                                                                    contador<- contador-1;
+                                                                    Escribir "Se ha dado salida al vehículo";
+                                                                2:
+                                                                    Si contador = 2 Entonces
+                                                                        NombreDueno2 <- " ";
+                                                                        TelefonoDueno2 <- " ";
+                                                                        Placa2 <- " ";
+                                                                        marca2 <- " ";
+                                                                    FinSi
+                                                                    Si contador = 3 Entonces
+                                                                        
+                                                                        NombreDueno2 <- NombreDueno3;
+                                                                        TelefonoDueno2 <- TelefonoDueno3;
+                                                                        Placa2 <- Placa3;
+                                                                        marca2 <- marca3;
+                                                                        
+                                                                        NombreDueno3 <- "";
+                                                                        TelefonoDueno3 <- "";
+                                                                        Placa3 <- "";
+                                                                        marca3 <- "";
+                                                                    FinSi
+                                                                    Si contador = 4 Entonces
+                                                                        
+                                                                        NombreDueno2 <- NombreDueno3;
+                                                                        TelefonoDueno2 <- TelefonoDueno3;
+                                                                        Placa2 <- Placa3;
+                                                                        marca2<- marca3;
+                                                                        
+                                                                        NombreDueno3 <- NombreDueno4;
+                                                                        TelefonoDueno3 <- TelefonoDueno4;
+                                                                        Placa3 <- Placa4;
+                                                                        marca3<- marca4;
+                                                                        
+                                                                        NombreDueno4 <- "";
+                                                                        TelefonoDueno4 <- "";
+                                                                        Placa4 <- "";
+                                                                        marca4 <- "";
+                                                                    FinSi
+                                                                    
+                                                                    Si contador = 5 Entonces
+                                                                        
+                                                                        NombreDueno2 <- NombreDueno3;
+                                                                        TelefonoDueno2 <- TelefonoDueno3;
+                                                                        Placa2 <- Placa3;
+                                                                        marca2 <- marca3;
+                                                                        
+                                                                        NombreDueno3 <- NombreDueno4;
+                                                                        TelefonoDueno3 <- TelefonoDueno4;
+                                                                        Placa3 <- Placa4;
+                                                                        marca3 <- marca4;
+                                                                        
+                                                                        NombreDueno4 <- NombreDueno5;
+                                                                        TelefonoDueno4 <- TelefonoDueno5;
+                                                                        Placa4 <- Placa5;
+                                                                        marca4 <- marca5;
+                                                                        
+                                                                        NombreDueno5 <- "";
+                                                                        TelefonoDueno5 <- "";
+                                                                        Placa5 <- "";
+                                                                        marca5 <- "";
+                                                                    FinSi
+                                                                    contador <- contador -1;
+                                                                    Escribir "Se ha dado salida al vehículo";
+                                                                3:
+                                                                    Si contador = 3 Entonces
+                                                                        
+                                                                        NombreDueno3 <- "";
+                                                                        TelefonoDueno3 <- "";
+                                                                        Placa3 <- "";
+                                                                        marca3 <- "";
+                                                                    FinSi
+                                                                    Si contador = 4 Entonces
+                                                                        
+                                                                        NombreDueno3 <- NombreDueno4;
+                                                                        TelefonoDueno3 <- TelefonoDueno4;
+                                                                        Placa3 <- Placa4;
+                                                                        marca3<- marca4;
+                                                                        
+                                                                        NombreDueno4 <- "";
+                                                                        TelefonoDueno4 <- "";
+                                                                        Placa4 <- "";
+                                                                        marca4 <- "";
+                                                                    FinSi
+                                                                    
+                                                                    Si contador = 5 Entonces
+                                                                        
+                                                                        NombreDueno3 <- NombreDueno4;
+                                                                        TelefonoDueno3 <- TelefonoDueno4;
+                                                                        Placa3 <- Placa4;
+                                                                        marca3 <- marca4;
+                                                                        
+                                                                        NombreDueno4 <- NombreDueno5;
+                                                                        TelefonoDueno4 <- TelefonoDueno5;
+                                                                        Placa4 <- Placa5;
+                                                                        marca4 <- marca5;
+                                                                        
+                                                                        NombreDueno5 <- "";
+                                                                        TelefonoDueno5 <- "";
+                                                                        Placa5 <- "";
+                                                                        marca5 <- "";
+                                                                    FinSi
+                                                                    contador <- contador -1;
+                                                                    Escribir "Se ha dado salida al vehículo";
+                                                                4:
+                                                                    Si contador = 4 Entonces
+                                                                        
+                                                                        NombreDueno4 <- "";
+                                                                        TelefonoDueno4 <- "";
+                                                                        Placa4 <- "";
+                                                                        marca4 <- "";
+                                                                    FinSi
+                                                                    
+                                                                    Si contador = 5 Entonces
+                                                                        
+                                                                        NombreDueno4 <- NombreDueno5;
+                                                                        TelefonoDueno4 <- TelefonoDueno5;
+                                                                        Placa4 <- Placa5;
+                                                                        marca4 <- marca5;
+                                                                        
+                                                                        NombreDueno5 <- "";
+                                                                        TelefonoDueno5 <- "";
+                                                                        Placa5 <- "";
+                                                                        marca5 <- "";
+                                                                    FinSi
+                                                                    contador <- contador -1;
+                                                                    Escribir "Se ha dado salida al vehículo";
+                                                                5:
+                                                                    Si contador = 5 Entonces
+                                                                        
+                                                                        NombreDueno5 <- "";
+                                                                        TelefonoDueno5 <- "";
+                                                                        Placa5 <- "";
+                                                                        marca5 <- "";
+                                                                    FinSi
+                                                                    contador <- contador -1;
+                                                                    Escribir "Se ha dado salida al vehículo";
+                                                                    
+                                                            FinSegun
+                                                            
+                                                        3:
+                                                            Escribir "Indique el número de placa del vehículo a consultar";
+                                                            Leer PlacaTemp;
+                                                            Si PlacaTemp = Placa1 O PlacaTemp = Placa2 O PlacaTemp = Placa3 O PlacaTemp = Placa4 O PlacaTemp = Placa5 Entonces
+                                                                Si PlacaTemp = Placa1 Entonces
+                                                                    Escribir "Vehículo de placa ", Placa1, " marca ", marca1, " propiedad de ",NombreDueno1," está registrado en este parqueadero";
+                                                                FinSi
+                                                                Si PlacaTemp = Placa2 Entonces
+                                                                    Escribir "Vehículo de placa ", Placa2, " marca ", marca2, " propiedad de ",NombreDueno2," está registrado en este parqueadero";
+                                                                FinSi
+                                                                Si PlacaTemp = Placa2 Entonces
+                                                                    Escribir "Vehículo de placa ", Placa3, " marca ", marca3, " propiedad de ",NombreDueno3," está registrado en este parqueadero";
+                                                                FinSi
+                                                                Si PlacaTemp = Placa4 Entonces
+                                                                    Escribir "Vehículo de placa ", Placa4, " marca ", marca1, " propiedad de ",NombreDueno4," está registrado en este parqueadero";
+                                                                FinSi
+                                                                Si PlacaTemp = Placa5 Entonces
+                                                                    Escribir "Vehículo de placa ", Placa5, " marca ", marca1, " propiedad de ",NombreDueno5," está registrado en este parqueadero";
+                                                                FinSi
+                                                            SiNo
+                                                                Escribir "Vehículo de placa ", PlacaTemp, " no esta en este parqueadero" ;
+                                                            FinSi
+                                                            
+                                                        4:
+                                                            c <- 1;
+                                                    FinSegun
+                                                Hasta Que c=1
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">  
+                                  <span class="card-title">Ejercicio 8</span>
+                                  <p>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+                                </div>
+                                <div class="card-action" id="code13">
+                                    <pre>
+                                        <code>
+                                            SubProceso menu()
+                                                Escribir " ";
+                                                Escribir "       ******* Escuela Automovilística El Maestro *******";
+                                                Escribir "";
+                                                Escribir "                         Menu Principal            ";
+                                                Escribir " ";
+                                                Escribir "       //// Indique su opción  ////";
+                                                Escribir " ";
+                                                Escribir "1. Registrar nuevo estudiante";
+                                                Escribir "2. Ingresar nota de la prueba de un estudiante";
+                                                Escribir "3. Consultar estudiante y si pasó el examen";
+                                                Escribir "4. Salir del programa";
+                                            FinSubProceso
+
+                                            SubProceso menuEstudiantes(Estudiante1,Estudiante2,Estudiante3,Estudiante4,Estudiante5,Estudiante6,Estudiante7,Estudiante8,IdentEstudiante1,IdentEstudiante2,IdentEstudiante3,IdentEstudiante4,IdentEstudiante5,IdentEstudiante6,IdentEstudiante7,IdentEstudiante8)
+                                                Escribir "Los estudiantes activos son: ";
+                                                Si contador=1 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                FinSi
+                                                Si contador=2 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                FinSi
+                                                Si contador=3 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                    Escribir "3. ",Estudiante3, ".........",IdentEstudiante3;
+                                                FinSi
+                                                Si contador=4 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                    Escribir "3. ",Estudiante3, ".........",IdentEstudiante3;
+                                                    Escribir "4. ",Estudiante4, ".........",IdentEstudiante4;
+                                                FinSi
+                                                Si contador=5 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                    Escribir "3. ",Estudiante3, ".........",IdentEstudiante3;
+                                                    Escribir "4. ",Estudiante4, ".........",IdentEstudiante4;
+                                                    Escribir "5. ",Estudiante5, ".........",IdentEstudiante5;
+                                                FinSi
+                                                Si contador=6 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                    Escribir "3. ",Estudiante3, ".........",IdentEstudiante3;
+                                                    Escribir "4. ",Estudiante4, ".........",IdentEstudiante4;
+                                                    Escribir "5. ",Estudiante5, ".........",IdentEstudiante5;
+                                                    Escribir "6. ",Estudiante6, ".........",IdentEstudiante6;
+                                                FinSi
+                                                Si contador=7 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                    Escribir "3. ",Estudiante3, ".........",IdentEstudiante3;
+                                                    Escribir "4. ",Estudiante4, ".........",IdentEstudiante4;
+                                                    Escribir "5. ",Estudiante5, ".........",IdentEstudiante5;
+                                                    Escribir "6. ",Estudiante6, ".........",IdentEstudiante6;
+                                                    Escribir "7. ",Estudiante7, ".........",IdentEstudiante7;
+                                                FinSi
+                                                Si contador=8 Entonces
+                                                    Escribir "1. ",Estudiante1, ".........",IdentEstudiante1;
+                                                    Escribir "2. ",Estudiante2, ".........",IdentEstudiante2;
+                                                    Escribir "3. ",Estudiante3, ".........",IdentEstudiante3;
+                                                    Escribir "4. ",Estudiante4, ".........",IdentEstudiante4;
+                                                    Escribir "5. ",Estudiante5, ".........",IdentEstudiante5;
+                                                    Escribir "6. ",Estudiante6, ".........",IdentEstudiante6;
+                                                    Escribir "7. ",Estudiante7, ".........",IdentEstudiante7;
+                                                    Escribir "8. ",Estudiante8, ".........",IdentEstudiante8;
+                                                FinSi
+                                                Si contador<=0 Entonces
+                                                    Escribir "No hay estudiantes inscritos";
+                                                FinSi
+                                            FinSubProceso
+
+                                            SubProceso Estadoestudiante(Estudiante1,Estudiante2,Estudiante3,Estudiante4,Estudiante5,Estudiante6,Estudiante7,Estudiante8,ResulPrueba1,ResulPrueba2,ResulPrueba3,ResulPrueba4,ResulPrueba5,ResulPrueba6,ResulPrueba7,ResulPrueba8)
+                                                Definir eleccion Como Entero;
+                                                Escribir "Indique estudiante a consultar";
+                                                Leer eleccion;
+                                                Segun eleccion Hacer
+                                                    1:
+                                                        Si ResulPrueba1 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante1, " cursó y ", ResulPrueba1, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante1, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    2:
+                                                        Si ResulPrueba2 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante2, " cursó y ", ResulPrueba2, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante2, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    3:
+                                                        Si ResulPrueba3 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante3, " cursó y ", ResulPrueba1, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante3, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    4:
+                                                        Si ResulPrueba4 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante4, " cursó y ", ResulPrueba4, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante4, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    5:
+                                                        Si ResulPrueba5 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante5, " cursó y ", ResulPrueba5, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante5, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    6:
+                                                        Si ResulPrueba6 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante6, " cursó y ", ResulPrueba6, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante6, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    7:
+                                                        Si ResulPrueba7 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante7, " cursó y ", ResulPrueba7, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante7, " aun no ha terminado el curso";
+                                                        FinSi
+                                                    8:
+                                                        Si ResulPrueba8 <> ""; Entonces
+                                                            Escribir "El estudiante ",Estudiante8, " cursó y ", ResulPrueba7, " el curso de conducción";
+                                                        SiNo
+                                                            Escribir "El estudiante ",Estudiante8, " aun no ha terminado el curso";
+                                                        FinSi
+                                                FinSegun
+                                            FinSubProceso
+
+                                            Proceso Punto8taller3
+                                                Definir Estudiante1 Como Caracter;
+                                                Definir Estudiante2 Como Caracter;
+                                                Definir Estudiante3 Como Caracter;
+                                                Definir Estudiante4 Como Caracter;
+                                                Definir Estudiante5 Como Caracter;
+                                                Definir Estudiante6 Como Caracter;
+                                                Definir Estudiante7 Como Caracter;
+                                                Definir Estudiante8 Como Caracter;
+                                                
+                                                Definir IdentEstudiante1 Como Caracter;
+                                                Definir IdentEstudiante2 Como Caracter;
+                                                Definir IdentEstudiante3 Como Caracter;
+                                                Definir IdentEstudiante4 Como Caracter;
+                                                Definir IdentEstudiante5 Como Caracter;
+                                                Definir IdentEstudiante6 Como Caracter;
+                                                Definir IdentEstudiante7 Como Caracter;
+                                                Definir IdentEstudiante8 Como Caracter;
+                                                
+                                                Definir ResulPrueba1 Como Caracter;
+                                                Definir ResulPrueba2 Como Caracter;
+                                                Definir ResulPrueba3 Como Caracter;
+                                                Definir ResulPrueba4 Como Caracter;
+                                                Definir ResulPrueba5 Como Caracter;
+                                                Definir ResulPrueba6 Como Caracter;
+                                                Definir ResulPrueba7 Como Caracter;
+                                                Definir ResulPrueba8 Como Caracter;
+                                                
+                                                Definir opcion Como Entero;
+                                                Definir contador Como Entero;
+                                                Definir IdentTemp Como Caracter;
+                                                Definir Repetirident Como Entero;
+                                                Definir nota como Entero;
+                                                Definir c Como Entero;
+                                                contador <- 0;
+                                                c <- 0;
+                                                
+                                                ResulPrueba1 <- "";
+                                                ResulPrueba2 <- "";
+                                                ResulPrueba3 <- "";
+                                                ResulPrueba4 <- "";
+                                                ResulPrueba5 <- "";
+                                                ResulPrueba6 <- "";
+                                                ResulPrueba7 <- "";
+                                                ResulPrueba8 <- "";
+                                                
+                                                Repetir
+                                                    menu();
+                                                    Leer opcion;
+                                                    Segun opcion Hacer
+                                                        1:
+                                                            si contador < 8 Entonces
+                                                                Escribir "Por favor ingrese el nombre del estudiante";
+                                                                Si contador = 0 Entonces
+                                                                    Leer Estudiante1;				
+                                                                FinSi
+                                                                Si contador = 1 Entonces
+                                                                    Leer Estudiante2;				
+                                                                FinSi
+                                                                Si contador = 2 Entonces
+                                                                    Leer Estudiante3;				
+                                                                FinSi
+                                                                Si contador = 3 Entonces
+                                                                    Leer Estudiante4;				
+                                                                FinSi
+                                                                Si contador = 4 Entonces
+                                                                    Leer Estudiante5;				
+                                                                FinSi
+                                                                Si contador = 5 Entonces
+                                                                    Leer Estudiante6;				
+                                                                FinSi
+                                                                Si contador = 6 Entonces
+                                                                    Leer Estudiante7;				
+                                                                FinSi
+                                                                Si contador = 7 Entonces
+                                                                    Leer Estudiante8;				
+                                                                FinSi
+                                                                Si contador >= 8 Entonces
+                                                                    Escribir "Lo sentimos, no se pueden admitir mas estudiantes";			
+                                                                FinSi
+                                                                
+                                                                
+                                                                Escribir "Por favor ingrese la identificación del estudiante";
+                                                                Leer IdentTemp;
+                                                                Repetirident<-0;
+                                                                Repetir
+                                                                    Escribir "Por favor ingrese la identificación del estudiante";
+                                                                    Leer IdentTemp;
+                                                                    Si IdentTemp <> IdentEstudiante1 Y IdentTemp <> IdentEstudiante2 Y IdentTemp <> IdentEstudiante3 Y IdentTemp <> IdentEstudiante4 Y IdentTemp <> IdentEstudiante5 Y IdentTemp <> IdentEstudiante6 Y IdentTemp <> IdentEstudiante7 Y IdentTemp <> IdentEstudiante8 Entonces
+                                                                        Si contador = 0 Entonces
+                                                                            IdentEstudiante1 <- IdentTemp;	
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 1 Entonces
+                                                                            IdentEstudiante2 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 2 Entonces
+                                                                            IdentEstudiante3 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 3 Entonces
+                                                                            IdentEstudiante4 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 4 Entonces
+                                                                            IdentEstudiante5 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 5 Entonces
+                                                                            IdentEstudiante6 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 6 Entonces
+                                                                            IdentEstudiante7 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                        Si contador = 7 Entonces
+                                                                            IdentEstudiante8 <- IdentTemp;
+                                                                            Repetirident <- 1;
+                                                                        FinSi
+                                                                    SiNo
+                                                                        Escribir "El usuario ya existe o la identificación ingresada es incorrecta";
+                                                                    FinSi
+                                                                Hasta Que Repetirident =1;
+                                                                
+                                                            FinSi
+                                                        2:
+                                                            menuEstudiantes(Estudiante1,Estudiante2,Estudiante3,Estudiante4,Estudiante5,Estudiante6,Estudiante7,Estudiante8,IdentEstudiante1,IdentEstudiante2,IdentEstudiante3,IdentEstudiante4,IdentEstudiante5,IdentEstudiante6,IdentEstudiante7,IdentEstudiante8);
+                                                            Escribir "Seleccione al que le desea asignar el resultado de la prueba";
+                                                            Escribir "Ingrese por favor si aprobo o reprobo el curso";
+                                                            leer nota;
+                                                            Segun nota Hacer
+                                                                1: 
+                                                                    Leer ResulPrueba1;
+                                                                2:
+                                                                    Leer ResulPrueba2;
+                                                                3:
+                                                                    Leer ResulPrueba3;
+                                                                4:
+                                                                    Leer ResulPrueba4;
+                                                                5:
+                                                                    Leer ResulPrueba5;
+                                                                6:
+                                                                    Leer ResulPrueba6;
+                                                                7:
+                                                                    Leer ResulPrueba7;
+                                                                8:
+                                                                    Leer ResulPrueba8;
+                                                            FinSegun
+                                                        3:
+                                                            menuEstudiantes(Estudiante1,Estudiante2,Estudiante3,Estudiante4,Estudiante5,Estudiante6,Estudiante7,Estudiante8,IdentEstudiante1,IdentEstudiante2,IdentEstudiante3,IdentEstudiante4,IdentEstudiante5,IdentEstudiante6,IdentEstudiante7,IdentEstudiante8);
+                                                            Estadoestudiante(Estudiante1,Estudiante2,Estudiante3,Estudiante4,Estudiante5,Estudiante6,Estudiante7,Estudiante8,ResulPrueba1,ResulPrueba2,ResulPrueba3,ResulPrueba4,ResulPrueba5,ResulPrueba6,ResulPrueba7,ResulPrueba8);
+                                                        4:
+                                                            c<-1;
+                                                    FinSegun
+                                                Hasta Que c=1
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Punto 3. Organizar todos los puntos del taller de arreglos en modo funciones.</span>  
+                                  <span class="card-title">Ejercicio 1</span>
+                                  <p>1. Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</p>
+                                  <img class="responsive-img" src="images/figura6.jpg">
+                                </div>
+                                <div class="card-action" id="code14">
+                                    <pre>
+                                        <code>
+                                            Proceso vector1	
+                                                Definir num Como Entero;
+                                                Dimension num[5];                                                
+                                                impresionumero(num);                                                
+                                            FinProceso
+
+                                            SubProceso impresionumero(num)
+                                                definir i Como Entero;
+                                                para i<- 0 Hasta 4 Con Paso 1 Hacer
+                                                    Escribir "Digite numero";
+                                                    leer num[i];
+                                                FinPara
+                                                Limpiar Pantalla;
+                                                para i<-0 Hasta 4 Con Paso 1 hacer
+                                                    Escribir "[",i,"]","=",num[i];
+                                                FinPara
+                                            FinSubProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">  
+                                  <span class="card-title">Ejercicio 2</span>
+                                  <p>2. Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</p>
+                                  <img class="responsive-img" src="images/figura7.jpg">
+                                </div>
+                                <div class="card-action" id="code15">
+                                    <pre>
+                                        <code>
+                                            SubProceso llenado(num)
+                                                Definir control Como Entero;
+                                                control <- 0;
+                                                Repetir
+                                                    num[control] <- Aleatorio(1, 100);
+                                                    control <- control + 1;
+                                                Hasta Que control > 19
+                                                Limpiar Pantalla;
+                                            FinSubProceso
+
+                                            SubProceso impresion(num)
+                                                Definir control2 Como Entero;
+                                                Definir pares, impares Como Caracter;
+                                                pares <- "";
+                                                impares <- "";
+                                                Para control2<-0 Hasta 19 Con Paso 1 Hacer
+                                                    Si (num[control2]  MOD 2 ) = 0 Entonces
+                                                        pares <- Concatenar(pares, ConvertirATexto(num[control2))];
+                                                        pares <- Concatenar(pares, ", ");
+                                                    SiNo
+                                                        impares <- Concatenar(impares, ConvertirATexto(num[control2))];
+                                                        impares <- Concatenar(impares, ", ");
+                                                    FinSi
+                                                FinPara
+                                                Escribir "Números pares: ", Subcadena(pares,0,((Longitud(pares) - 1)-2));
+                                                Escribir "Números impares: ", Subcadena(impares,0,((Longitud(impares) - 1)-2));
+                                            FinSubProceso
+                                            
+                                            Proceso ejercicioDosT4
+                                                Definir pares, impares como Caracter;
+                                                Definir num Como Entero;
+                                                Dimension num[20];
+                                                llenado(num);
+                                                impresion(num);
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content"> 
+                                  <span class="card-title">Ejercicio 3</span>
+                                  <p>3. Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p>
+                                </div>
+                                <div class="card-action" id="code16">
+                                    <pre>
+                                        <code>
+                                            Proceso numeros_primos	
+                                                Definir i,num,contador Como Entero;
+                                                num<-0;
+                                                contador<-0;                                                
+                                                numerosprimos(num,contador);
+                                            FinProceso
+
+                                            SubProceso numerosprimos(num,contador)
+                                                definir i Como Entero;
+                                                para num<- 1 Hasta 1000 Hacer
+                                                    i<-1;
+                                                    contador<-0;
+                                                    Mientras i<=num Hacer
+                                                        si num mod i == 0 Entonces
+                                                            contador<-contador+1;
+                                                        FinSi
+                                                        i<-i+1;
+                                                    FinMientras
+                                                    si contador==2 Entonces
+                                                        Escribir "el numero ",num, " es primo";
+                                                    FinSi
+                                                FinPara 
+                                            FinSubProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 4</span>
+                                   <p>4. Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</p>
+                                    <img class="responsive-img" src="images/figura8.jpg">
+                                    <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+                                    <img class="responsive-img" src="images/figura9.jpg">
+                                </div>
+                                <div class="card-action" id="code17">
+                                    <pre>
+                                        <code>
+                                            Proceso matriz_bidimensional	
+                                                Definir fila, columna Como Entero;
+                                                Definir matriz Como Entero;
+                                                Dimension matriz[4,5];
+                                                fila<-0;
+                                                columna<-0;                                                
+                                                matriznumeros(matriz,fila,columna);
+                                                impresionmatriz(matriz,fila,columna);                                                
+                                            FinProceso
+
+                                            SubProceso matriznumeros(matriz,fila,columna)
+                                                matriz[0,0] <- 01;
+                                                matriz[0,1] <- 02;
+                                                matriz[0,2] <- 03;
+                                                matriz[0,3] <- 04;
+                                                matriz[0,4] <- 05;
+                                                matriz[1,0] <- 06;
+                                                matriz[1,1] <- 07;
+                                                matriz[1,2] <- 08;
+                                                matriz[1,3] <- 09;
+                                                matriz[1,4] <- 10;
+                                                matriz[2,0] <- 11;
+                                                matriz[2,1] <- 12;
+                                                matriz[2,2] <- 13;
+                                                matriz[2,3] <- 14;
+                                                matriz[2,4] <- 15;
+                                                matriz[3,0] <- 16;
+                                                matriz[3,1] <- 17;
+                                                matriz[3,2] <- 18;
+                                                matriz[3,3] <- 19;
+                                                matriz[3,4] <- 20;
+                                                
+                                                Para fila<-0 hasta 3 con paso 1 Hacer
+                                                    para columna<-0 hasta 4 con paso 1 Hacer
+                                                        Escribir matriz[fila,columna]," ",Sin Saltar;
+                                                    FinPara
+                                                    Escribir " ";
+                                                FinPara                                                
+                                                Escribir "     "; 
+                                            FinSubProceso
+
+                                            SubProceso impresionmatriz(matriz,fila,columna)
+                                                para fila<-0 hasta 0 con paso 1 Hacer
+                                                    para columna<-0 hasta 4 con paso 1 Hacer
+                                                        Escribir matriz[fila,columna]," ",Sin Saltar;
+                                                    FinPara
+                                                    Escribir " ";
+                                                FinPara
+                                                para fila<-1 hasta 1 con paso 1 Hacer
+                                                    para columna<-4 hasta 0 con paso -1 Hacer
+                                                        Escribir matriz[fila,columna]," ",Sin Saltar;
+                                                    FinPara
+                                                    Escribir " ";
+                                                FinPara
+                                                para fila<-2 hasta 2 con paso 1 Hacer
+                                                    para columna<-0 hasta 4 con paso 1 Hacer
+                                                        Escribir matriz[fila,columna]," ",Sin Saltar;
+                                                    FinPara
+                                                    Escribir " ";
+                                                FinPara
+                                                para fila<-3 hasta 3 con paso 1 Hacer
+                                                    para columna<-4 hasta 0 con paso -1 Hacer
+                                                        Escribir matriz[fila,columna]," ",Sin Saltar;
+                                                    FinPara
+                                                    Escribir " ";
+                                                FinPara
+                                                
+                                            FinSubProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 5</span>
+                                  <p>5. Se debe de imprimir el siguiente cuadro</p>
+                                  <img class="responsive-img" src="images/figura10.jpg">
+                                  <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</p>
+                                </div>
+                                <div class="card-action" id="code18">
+                                    <pre>
+                                        <code>
+                                            Proceso tablas_miltiplicacion	
+                                                Definir fila, columna Como Entero;
+                                                Definir r Como Caracter;
+                                                Definir matriz Como Entero;
+                                                Dimension matriz[10,10];
+                                                fila<-0;
+                                                columna<-0;                                                
+                                                impresiontablas();
+                                                matriztablasmultiplicar(matriz,fila,columna);                                                
+                                            FinProceso
+
+                                            SubProceso impresiontablas()
+                                                Escribir "          ------------------------------------------------------------";
+                                                Escribir "         |                    C O L U M N A S                         |";
+                                                Escribir "          ------------------------------------------------------------";
+                                                Escribir " ________|  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9   |";
+                                                Escribir "|   |  0 | 1x1 | 2x1 | 3x1 | 4x1 | 5x1 | 6x1 | 7x1 | 8x1 | 9x1 | 10x1 |";
+                                                Escribir "|   |  1 | 1x2 | 2x2 | 3x2 | 4x2 | 5x2 | 6x2 | 7x2 | 8x2 | 9x2 | 10x2 |";
+                                                Escribir "| F |  2 | 1x3 | 2x3 | 3x3 | 4x3 | 5x3 | 6x3 | 7x3 | 8x3 | 9x3 | 10x3 |";
+                                                Escribir "| I |  3 | 1x4 | 2x4 | 3x4 | 4x4 | 5x4 | 6x4 | 7x4 | 8x4 | 9x4 | 10x4 |";
+                                                Escribir "| L |  4 | 1x5 | 2x5 | 3x5 | 4x5 | 5x5 | 6x5 | 7x5 | 8x5 | 9x5 | 10x5 |";
+                                                Escribir "| A |  5 | 1x5 | 2x6 | 3x6 | 4x6 | 5x6 | 6x6 | 7x6 | 8x6 | 9x6 | 10x6 |";
+                                                Escribir "| S |  6 | 1x7 | 2x7 | 3x7 | 4x7 | 5x7 | 6x7 | 7x7 | 8x7 | 9x7 | 10x7 |";
+                                                Escribir "|   |  7 | 1x8 | 2x8 | 3x8 | 4x8 | 5x8 | 6x8 | 7x8 | 8x8 | 9x8 | 10x8 |";
+                                                Escribir "|   |  8 | 1x9 | 2x9 | 3x9 | 4x9 | 5x9 | 6x9 | 7x9 | 8x9 | 9x9 | 10x9 |";
+                                                Escribir "|   |  9 | 1x10| 2x10| 3x10| 4x10| 5x10| 6x10| 7x10| 8x10| 9x10| 10x10|";
+                                                Escribir " _____________________________________________________________________";
+                                                Escribir " ";
+                                            FinSubProceso
+
+                                            SubProceso matriztablasmultiplicar(matriz,fila,columna)
+                                                matriz[0,0] <- 1*1;
+                                                matriz[0,1] <- 1*2;
+                                                matriz[0,2] <- 1*3;
+                                                matriz[0,3] <- 1*4;
+                                                matriz[0,4] <- 1*5;
+                                                matriz[0,5] <- 1*6;
+                                                matriz[0,6] <- 1*7;
+                                                matriz[0,7] <- 1*8;
+                                                matriz[0,8] <- 1*9;
+                                                matriz[0,9] <- 1*10;
+                                                matriz[1,0] <- 2*1;
+                                                matriz[1,1] <- 2*2;
+                                                matriz[1,2] <- 2*3;
+                                                matriz[1,3] <- 2*4;
+                                                matriz[1,4] <- 2*5;
+                                                matriz[1,5] <- 2*6;
+                                                matriz[1,6] <- 2*7;
+                                                matriz[1,7] <- 2*8;
+                                                matriz[1,8] <- 2*9;
+                                                matriz[1,9] <- 2*10;
+                                                matriz[2,0] <- 3*1;
+                                                matriz[2,1] <- 3*2;
+                                                matriz[2,2] <- 3*3;
+                                                matriz[2,3] <- 3*4;
+                                                matriz[2,4] <- 3*5;
+                                                matriz[2,5] <- 3*6;
+                                                matriz[2,6] <- 3*7;
+                                                matriz[2,7] <- 3*8;
+                                                matriz[2,8] <- 3*9;
+                                                matriz[2,9] <- 3*10;
+                                                matriz[3,0] <- 4*1;
+                                                matriz[3,1] <- 4*2;
+                                                matriz[3,2] <- 4*3;
+                                                matriz[3,3] <- 4*4;
+                                                matriz[3,4] <- 4*5;
+                                                matriz[3,5] <- 4*6;
+                                                matriz[3,6] <- 4*7;
+                                                matriz[3,7] <- 4*8;
+                                                matriz[3,8] <- 4*9;
+                                                matriz[3,9] <- 4*10;
+                                                matriz[4,0] <- 5*1;
+                                                matriz[4,1] <- 5*2;
+                                                matriz[4,2] <- 5*3;
+                                                matriz[4,3] <- 5*4;
+                                                matriz[4,4] <- 5*5;
+                                                matriz[4,5] <- 5*6;
+                                                matriz[4,6] <- 5*7;
+                                                matriz[4,7] <- 5*8;
+                                                matriz[4,8] <- 5*9;
+                                                matriz[4,9] <- 5*10;
+                                                matriz[5,0] <- 6*1;
+                                                matriz[5,1] <- 6*2;
+                                                matriz[5,2] <- 6*3;
+                                                matriz[5,3] <- 6*4;
+                                                matriz[5,4] <- 6*5;
+                                                matriz[5,5] <- 6*6;
+                                                matriz[5,6] <- 6*7;
+                                                matriz[5,7] <- 6*8;
+                                                matriz[5,8] <- 6*9;
+                                                matriz[5,9] <- 6*10;
+                                                matriz[6,0] <- 7*1;
+                                                matriz[6,1] <- 7*2;
+                                                matriz[6,2] <- 7*3;
+                                                matriz[6,3] <- 7*4;
+                                                matriz[6,4] <- 7*5;
+                                                matriz[6,5] <- 7*6;
+                                                matriz[6,6] <- 7*7;
+                                                matriz[6,7] <- 7*8;
+                                                matriz[6,8] <- 7*9;
+                                                matriz[6,9] <- 7*10;
+                                                matriz[7,0] <- 8*1;
+                                                matriz[7,1] <- 8*2;
+                                                matriz[7,2] <- 8*3;
+                                                matriz[7,3] <- 8*4;
+                                                matriz[7,4] <- 8*5;
+                                                matriz[7,5] <- 8*6;
+                                                matriz[7,6] <- 8*7;
+                                                matriz[7,7] <- 8*8;
+                                                matriz[7,8] <- 8*9;
+                                                matriz[7,9] <- 8*10;
+                                                matriz[8,0] <- 9*1;
+                                                matriz[8,1] <- 9*2;
+                                                matriz[8,2] <- 9*3;
+                                                matriz[8,3] <- 9*4;
+                                                matriz[8,4] <- 9*5;
+                                                matriz[8,5] <- 9*6;
+                                                matriz[8,6] <- 9*7;
+                                                matriz[8,7] <- 9*8;
+                                                matriz[8,8] <- 9*9;
+                                                matriz[8,9] <- 9*10;
+                                                matriz[9,0] <- 10*1;
+                                                matriz[9,1] <- 10*2;
+                                                matriz[9,2] <- 10*3;
+                                                matriz[9,3] <- 10*4;
+                                                matriz[9,4] <- 10*5;
+                                                matriz[9,5] <- 10*6;
+                                                matriz[9,6] <- 10*7;
+                                                matriz[9,7] <- 10*8;
+                                                matriz[9,8] <- 10*9;
+                                                matriz[9,9] <- 10*10;
+                                                
+                                                Para fila<-0 hasta 9 Con Paso 1 Hacer
+                                                    para columna <-0 hasta 9 Con paso 1 Hacer
+                                                        
+                                                    FinPara
+                                                    
+                                                FinPara
+                                                
+                                                Para fila<-0 hasta 9 con paso 1 Hacer
+                                                    Para columna<-0 hasta 9 con paso 1 Hacer
+                                                        Escribir "Indique No.fila";
+                                                        leer fila;
+                                                        escribir "Indique No. columna";
+                                                        leer columna;
+                                                        Escribir "El resultado es: ",matriz(fila,columna);
+                                                        Escribir " ";
+                                                        esperar 30 Segundos;		
+                                                    FinPara                                                    
+                                                FinPara                                                
+                                            FinSubProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>

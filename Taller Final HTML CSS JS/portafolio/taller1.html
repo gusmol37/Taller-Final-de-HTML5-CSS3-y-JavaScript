@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Taller final de HTML5, CSS3 y JavaScript"/>
+        <title>Portafolio</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&display=swap" rel="stylesheet">
+        
+        <script src="javascript/bookstores/jquery.3.3.1.js"></script>
+        <script src="javascript/bookstores/materialize.js"></script>
+        <script src="javascript/bookstores/init.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="parallax-container" id="taller1">
+                <p>Taller 1. Variables e Impresión. PSeInt.</p>
+                <div class="parallax"><img src="images/blue_neon.jpeg"></div>
+            </div>
+        </header>
+        <nav>
+            <ul class="tabs">
+                <li class="tab col s3"><a id="back" onclick="window.history.back()">Ir a Página Principal</a></li>
+            </ul>
+        </nav>
+        <main>
+            <ul class="collection">
+                <li class="collection-item">
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 1</span>
+                                    <p>1. Realizar un programa el cual solicite su nombre y apellidos.</p>
+                                </div>
+                                <div class="card-action" id="code1">
+                                    <pre>
+                                        <code>
+                                            Proceso pedir_nombres_apellidos
+        
+                                                Definir nombres Como Caracter;
+                                                Definir apellidos Como Caracter;
+                                                
+                                                Escribir "¿Cuáles son tus nombres?";
+                                                Leer nombres;
+                                                
+                                                Escribir "¿Cuáles son tus apellidos?";
+                                                Leer apellidos;
+
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 2</span>
+                                    <p>2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+                                </div>
+                                <div class="card-action" id="code2">
+                                    <pre>
+                                        <code>
+                                            Proceso datos_personales
+
+                                                Definir nombres Como Caracter;
+                                                Definir apellidos Como Caracter;
+                                                Definir edad Como Entero;
+                                                Definir estatura Como Real;
+                                                
+                                                Escribir "¿Cuáles son tus nombres?";
+                                                Leer nombres;
+                                                
+                                                Escribir "¿Cuáles son tus apellidos?";
+                                                Leer apellidos;
+                                                
+                                                Escribir "¿Cuál es tu edad?";
+                                                Leer edad;
+                                                
+                                                Escribir "¿Cuál es tu estatura?";
+                                                Leer estatura;
+
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 3</span>
+                                    <p>3. Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p>
+                                </div>
+                                <div class="card-action" id="code3">
+                                    <pre>
+                                        <code>
+                                            Proceso mis_padres_son
+	
+                                                Definir nombres_hijo Como Caracter;
+                                                Definir apellidos_hijo Como Caracter;
+                                                Definir nombres_madre Como Caracter;
+                                                Definir apellidos_madre Como Caracter;
+                                                Definir nombres_padre Como Caracter;
+                                                Definir apellidos_padre Como Caracter;
+                                                
+                                                Escribir "¿Cuáles son tus nombres?";
+                                                Leer nombres_hijo;
+                                                
+                                                Escribir "¿Cuáles son tus apellidos?";
+                                                Leer apellidos_hijo;
+                                                
+                                                Escribir "¿Cuáles son los nombres de tu madre?";
+                                                Leer nombres_madre;
+                                                
+                                                Escribir "¿Cuáles son los apellidos de tu madre?";
+                                                Leer apellidos_madre;
+                                                
+                                                Escribir "¿Cuáles son los nombres de tu padre?";
+                                                Leer nombres_padre;
+                                                
+                                                Escribir "¿Cuáles son los apellidos de tu padre?";
+                                                Leer apellidos_padre;
+                                                
+                                                Escribir "Yo ", nombres_hijo," ",apellidos_hijo, ", soy hijo de  ",nombres_madre," ",apellidos_madre, " y ",nombres_padre," ",apellidos_padre;
+
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 4</span>
+                                    <p>4. Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</p>
+                                </div>
+                                <div class="card-action" id="code4">
+                                    <pre>
+                                        <code>
+                                            Proceso capital_pais
+
+                                                Definir pais Como Caracter;
+                                                Definir capital Como Caracter;
+                                                    
+                                                Escribir "Por favor, indique el nombre de la ciudad capital de un país.";
+                                                Leer capital;
+                                                
+                                                Escribir "Por favor, indique el nombre del país al cual, corresponde la capital antes señalada.";
+                                                Leer pais;
+                                                
+                                                Limpiar pantalla;
+                                                
+                                                Escribir "La ciudad ",capital,", ", "es la capital del país ",pais,".";
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 5</span>
+                                    <p>5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</p>
+                                </div>
+                                <div class="card-action" id="code5">
+                                    <pre>
+                                        <code>
+                                           Proceso ejercicioCinco
+	
+                                                Definir nombreMascota Como Caracter;
+                                                Definir edadMascota Como Real;
+                                                Definir tipo Como Caracter;
+                                                Definir nombreDueno Como Caracter;
+
+                                                Escribir "Por favor ingrese el nombre de su Mascota:";
+                                                leer nombreMascota;
+
+                                                Escribir "Por favor ingrese la edad de su Mascota:";
+                                                leer edadMascota;
+
+                                                Escribir "Por favor ingrese su raza:";
+                                                leer tipo;
+
+                                                Escribir "Por favor ingrese su nombre y apellidos:";
+                                                leer nombreDueno;	
+
+                                                Limpiar Pantalla;
+
+                                                Escribir "";
+                                                Escribir Mayusculas(nombreMascota), " es un(a) ", tipo, ", el cual, tiene ";
+                                                Escribir edadMascota, " años de edad y ", Mayusculas(nombreDueno), " es actualmente su dueño(a)." ;
+                                                Escribir "";
+
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>

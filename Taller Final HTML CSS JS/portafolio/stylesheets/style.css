@@ -1,0 +1,132 @@
+
+
+/*Cambios en libreria*/
+.parallax-container { height: 450px;}
+
+@media only screen and (min-width: 601px){ nav{ height: 51px;}}
+
+.tabs{ height: 51px; background-color: hsl(204, 73%, 55%); }
+
+.tabs .tab{ text-transform: none; height: 51px; line-height: 47px;}
+
+.tabs .tab a{ color: rgb(245, 241, 241); font-size: 28px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding: 0px 40px;}
+
+.tabs .tab a:hover { background-color: rgb(241, 134, 40); color: #1120ca; text-transform: none}
+
+.tabs .tab a.active{ color: red}
+
+.tabs .indicator { height: 0px; background-color: inherit}
+
+#test1{ color: rgb(3, 3, 3)}
+
+.collapsible{margin: 1rem 0 1rem 15%; width: 70%; text-align: center}
+
+.collapsible-body{padding: 1rem}
+
+figure { margin: 1em 10px;}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){ color: #2f29db}
+
+.card .card-content .card-title{font-family: Cambria; color: #0e43f0; font-weight: bold}
+
+pre{ margin: 0 -332px}
+
+/*Css3*/
+body { margin: -20px 0 0 0; font-family: Cambria}
+
+h1{ font-weight: bold; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, cursiva; color: white; padding-top: 6%; text-align: center;}
+
+h5{ font-weight: bold; color: #2416b9; padding-top: 3%; text-align: center;}
+
+h6{ color: #4531e0}
+
+.parallax-container p{text-align: center; font-size: 4rem; padding-top: 2%; margin-left: -105px; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+main{ padding: 30px 20px;}
+
+nav{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: aliceblue;
+    font-family: sans-serif;
+    position:fixed;
+    top:0;
+    width:100%
+}
+
+li .collapsible-header{color: white; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: hsl(204, 73%, 55%)}
+
+#foto{ width: 20%; box-shadow: 0 0 15px hsl(204, 73%, 55%);}
+
+.title{ color: #0e1fdb}
+
+.collection-item p b{ color: #0e298d;}
+
+#back{ color: white}
+
+#video1 .card-action{ border-bottom: none}
+#video2 .card-action{ border-bottom: none}
+#video3 .card-action{ border-bottom: none}
+#video4 .card-action{ border-bottom: none}
+#video5 .card-action{ border-bottom: none}
+#video6 .card-action{ border-bottom: none}
+
+#code1{ background-color: #eceae4; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code11{ background-color: #ece9e3; width: 100; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code2{ background-color: #ece9e3; width: 100; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code21{ background-color: #ece9e3; width: 100; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code3{ background-color: #ece9e3; width: 100% padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code31{ background-color: #ece9e3; width: 113%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code4{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code41{ background-color: #ece9e3; width: 108%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code5{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code6{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code61{ background-color: #ece9e3; width: 106%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code7{ background-color: #ece9e3; width: 100; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code71{ background-color: #ece9e3; width: 110%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code8{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code81{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code100{ background-color: #ece9e3; width: 125%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code9{ background-color: #ece9e3; width: 100; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code10{ background-color: #ece9e3; width: 100% padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code11{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code12{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code13{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code14{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code15{ background-color: #ece9e3; width: %; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code16{ background-color: #ece9e3; width: 100; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code17{ background-color: #ece9e3; width: 110%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+#code18{ background-color: #ece9e3; width: 100%; padding: 0px; border: 2px solid #294ce7; border-radius: 10px; margin-left: 24px}
+
+.card{box-shadow: none}
+
+.card-content #main1{width: 100%}
+.card-content #main2{width: 100%}
+.card-content #main3{width: 100%}
+.card-content #main4{width: 100%}
+.card-content #main5{width: 100%}
+.card-content #main6{width: 100%}
+
+.card .card-action{font-weight: bold; box-shadow: none; border-bottom: 1px solid rgba(160,160,160,0.2)}
+
+#description{display: inline-block; width: 60%; color: black; margin: 0 26px 0 -20px;}
+
+#description p{text-align: justify}
+
+#data{display: inline-block; width: 30%; text-align: justify}
+
+#data p{color: black}
+
+#data p b{color: #0e1fdb}
+
+#data p a{color: #0e1fdb}
+
+#taller1{ height: 200px}
+
+.code{ background-color:#DFD8CA; border: 2px solid #FBF3E4; border-radius: 10px}
+
+footer{ color: #0e1fdb; background-color: #6cc5ec; width: 100%;}
+
+footer p{margin: 0; text-align: right}
+

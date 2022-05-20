@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Taller final de HTML5, CSS3 y JavaScript"/>
+        <title>Portafolio</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&display=swap" rel="stylesheet">
+        
+        <script src="javascript/bookstores/jquery.3.3.1.js"></script>
+        <script src="javascript/bookstores/materialize.js"></script>
+        <script src="javascript/bookstores/init.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="parallax-container" id="taller1">
+                <p>Taller 3. Ciclos. PSeInt.<br></p>
+                <div class="parallax"><img src="images/blue_neon.jpeg"></div>
+            </div>
+        </header>
+        <nav>
+            <ul class="tabs">
+                <li class="tab col s3"><a id="back" onclick="window.history.back()">Ir a Página Principal</a></li>
+            </ul>
+        </nav>
+        <main>
+            <ul class="collection">
+                <li class="collection-item">
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 1</span>
+                                    <p>1. Realizar la siguiente figura por medio del ciclo Para.</p>
+                                    <img class="responsive-img" src="images/figura1.jpg">
+                                </div>
+                                <div class="card-action" id="code1">
+                                    <pre>
+                                        <code>
+                                            Proceso escalera_derecha
+	
+                                                Definir a, b Como Entero;
+                                                    
+                                                Para a <- 1 hasta 10 Con Paso 1 Hacer
+                                            
+                                                    Para b <- 1 Hasta a Con Paso 1 Hacer
+                                                        Escribir "* " Sin Saltar;
+                                                    FinPara
+                                            
+                                                    Escribir"";
+                                            
+                                                FinPara
+
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 2</span>
+                                    <p>2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p>
+                                    <img class="responsive-img" src="images/figura2.jpg">
+                                </div>
+                                <div class="card-action" id="code2">
+                                    <pre>
+                                        <code>
+                                            Proceso escalera_izquierda_mientras_hacer
+
+                                                Definir j, i, k, l Como Entero;
+                                                    
+                                                i <- 1;
+                                                k <- 1;
+                                                
+                                                Mientras (i <= 10) y (k <= 10)  Hacer
+
+                                                    j <- i;
+
+                                                    Mientras (j <= 10) Hacer
+                                                        Escribir "  " Sin Saltar;
+                                                        j <- j+1;
+                                                    FinMientras
+
+                                                    l <- 1;
+
+                                                    Mientras (l <= k) Hacer
+                                                        Escribir " *"; Sin Saltar;
+                                                        l <- l+1;
+                                                    FinMientras
+
+                                                    i <- i+1;
+                                                    k<-k+1;
+                                                    Escribir "";
+
+                                                    
+                                                FinMientras
+
+                                            FinProceso                                      
+             
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 3</span>
+                                    <p>3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+                                    <img class="responsive-img" src="images/figura3.jpg">
+                                </div>
+                                <div class="card-action" id="code3">
+                                    <pre>
+                                        <code>
+                                            Proceso Taller3_Ejercicio3
+
+                                                Definir i, j, f, k, l Como Entero;
+                                                
+                                                f<-0;
+                                                j<-0;
+                                                l<-1;
+                                                Repetir
+                                                    i<-j;
+                                                    Repetir
+                                                        Escribir " " Sin Saltar;
+                                                        i<-i+1;
+                                                    Hasta Que i>=11
+                                                    j<-j+1;
+                                                    
+                                                    k<-l;
+                                                    Repetir
+                                                        Escribir "*" Sin Saltar;
+                                                        k<-k-1;
+                                                    Hasta Que k<=0
+                                                    l<- l+2;
+                                                    
+                                                    f<-f+1;
+                                                    Escribir "";
+                                                Hasta Que f=11;
+                                                
+                                                f<-0;
+                                                Repetir
+                                                    Escribir "         ***";
+                                                    
+                                                    f<-f+1;
+                                                Hasta Que f=2;
+
+                                                f<-0;
+
+                                                Repetir
+                                                    Escribir "        *****";
+                                                Hasta Que f=0
+                                                
+                                                f<-0;
+
+                                                Repetir
+                                                    Escribir "       *******";
+                                                    Escribir " ";
+                                                Hasta Que f=0
+
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 4</span>
+                                    <p>4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</p>
+                                    <img class="responsive-img" src="images/figura4.jpg">
+                                </div>
+                                <div class="card-action" id="code4">
+                                    <pre>
+                                        <code>
+                                            Proceso Taller3_Ejercicio4
+	
+                                                //Declarar variables
+                                                
+                                                Definir number, a Como Entero;
+                                                
+                                                
+                                                
+                                                //Ingreso de datos y cálculos
+                                                
+                                                Escribir "Tablas de Miltiplicación";
+                                                Escribir " 									";
+                                                Escribir "Indique el número de la tabla que desea consultar";
+                                                Escribir " 									";
+                                                Leer number;
+                                                Escribir " 									";
+                                                
+                                                Para a <- 1 Hasta 10 Con Paso 1 Hacer
+                                                    
+                                                    Escribir a, " x ", number, " = ", a * number;
+                                                    
+                                                FinPara
+
+                                                Escribir " 									";
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 5</span>
+                                  <p>5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</p>
+                                  <img class="responsive-img" src="images/figura5.jpg">
+                                </div>
+                                <div class="card-action" id="code5">
+                                    <pre>
+                                        <code>
+                                            Proceso Taller3_Ejercicio5
+	
+                                                Definir nombre Como Caracter;
+                                                Definir menu Como Entero;
+                                                
+                                                Repetir
+                                                    Escribir "Menu de Usuario";
+                                                    Escribir " ";
+                                                    Escribir "1. Capturar Nombre";
+                                                    Escribir "2. Saludar Persona";
+                                                    Escribir "3. Salir del Sistema";
+                                                    leer menu;
+                                                    
+                                                    Segun menu Hacer
+                                                        1:
+                                                            Escribir "Indique su nombre";
+                                                            Leer nombre;
+                                                            Escribir "Nombre capturado como ", nombre;
+                                                            Esperar 4 Segundos;
+                                                            
+                                                        2:	
+                                                            Escribir "¿A quien deseas saludar?";
+                                                            Leer nombre;
+                                                            Escribir "Saludos enviados a ", nombre;
+                                                            Esperar 4 Segundos;
+                                                            
+                                                        3:
+                                                            
+                                                    FinSegun
+                                                    
+                                                    Limpiar Pantalla;
+                                                Hasta Que menu = 3;
+                                                
+                                                
+                                                Escribir "                                    ";
+                                                Escribir "******* Gracias por usar la app. Hasta Luego. *******";
+                                                Escribir "                                    ";
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 6</span>
+                                  <p>6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+                                </div>
+                                <div class="card-action" id="code61">
+                                    <pre>
+                                        <code>
+                                            Proceso agenda_contactos
+            
+                                                    Definir contacto1 Como Caracter;
+                                                    Definir contacto2 Como Caracter;
+                                                    Definir contacto3 Como Caracter;
+                                                    Definir telefono1 Como Entero;
+                                                    Definir telefono2 Como Entero;
+                                                    Definir telefono3 Como Entero;
+                                                    Definir menu1, menu2, menu3 Como Entero;
+                                                    Definir org1, org2, org3 Como Caracter;
+                                                    Definir bnd1, bnd2, bnd3 Como Logico;
+                                                    
+                                                    telefono1<-1;
+                                                    telefono2<-2;
+                                                    telefono3<-3;
+                                                    
+                                                    bnd1 <- Verdadero;
+                                                    
+                                                    Mientras bnd1 = Verdadero Hacer
+                                                        
+                                                        Limpiar Pantalla;
+                                                        
+                                                        Escribir "Menú principal";
+                                                        Escribir "Seleccione una opción";
+                                                        Escribir " ";
+                                                        Escribir "1. Agregar contacto (Solo podrá agreegar 3 contactos)";
+                                                        Escribir "2. Ver contactos almacenados";
+                                                        Escribir "3. Eliminar contacto";
+                                                        Escribir "4. Salir";
+                                                        Leer menu1;
+                                                        
+                                                        Limpiar Pantalla;
+                                                        
+                                                        Segun menu1 Hacer
+                                                            1:
+                                                                bnd2 <- Verdadero;
+                                                                Mientras bnd2 = Verdadero Hacer
+                                                                    Escribir "Agregar contacto";
+                                                                    Escribir " ";
+                                                                    Escribir "1. Agregar en Contacto 1";
+                                                                    Escribir "2. Agregar en Contacto 2";
+                                                                    Escribir "3. Agregar en Contacto 3";
+                                                                    Escribir "4. Regresar al Menú Principal";
+                                                                    Leer menu2;
+                                                                    
+                                                                    Limpiar Pantalla;
+                                                                    
+                                                                    Segun menu2 Hacer
+                                                                        1:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique nombre del contacto";
+                                                                                Leer contacto1;
+                                                                                Escribir "Indique organización del contacto";
+                                                                                Leer org1;
+                                                                                Escribir "Indique número de teléfono del contacto";
+                                                                                Leer telefono1;
+                                                                                Si telefono1  <> telefono1 y telefono2 <> telefono3 Entonces
+                                                                                    Escribir "Contacto agregado";
+                                                                                    Escribir " ";
+                                                                                    Escribir "Presione una tecla para regresar";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "Imposible agregar contacto. El número ya está registrado";
+                                                                                    Escribir " ";
+                                                                                    Escribir "Presione una tecla para regresar";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    
+                                                                                    bnd3 <- Falso;
+                                                                                    
+                                                                                    
+                                                                                FinSi
+                                                                            FinMientras
+                                                                        2:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique nombre del contacto";
+                                                                                Leer nombre2;
+                                                                                Escribir "Indique organización del contacto";
+                                                                                Leer org2;
+                                                                                Escribir "Indique número de teléfono del contacto";
+                                                                                Leer telefono2;
+                                                                                Si telefono2  <> telefono1 y telefono2 <> telefono3 Entonces
+                                                                                    Escribir "Contacto agregado";
+                                                                                    Escribir " ";
+                                                                                    Escribir "Presione una tecla para regresar";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "Imposible agregar contacto. El número ya está registrado";
+                                                                                    Escribir " ";
+                                                                                    Escribir "Presione una tecla para regresar";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    telefono2 <- -1;
+                                                                                    bnd3 <- Falso;
+                                                                                    
+                                                                                FinSi
+                                                                            FinMientras
+                                                                        3:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique nombre del contacto";
+                                                                                Leer Nombre3;
+                                                                                Escribir "Indique organización del contacto";
+                                                                                Leer Org3;
+                                                                                Escribir "Indique número de teléfono del contacto";
+                                                                                Leer telefono3;
+                                                                                Si telefono3  <> telefono1 y telefono3 <> telefono2 Entonces
+                                                                                    Escribir "Contacto agregado";
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para regresar";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "Imposible agregar contacto. El número ya está registrado";
+                                                                                    Escribir " ";
+                                                                                    Escribir "Presione una tecla para regresar";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    telefono3 <- -1;
+                                                                                    bnd3 <- Falso;
+                                                                                    
+                                                                                FinSi
+                                                                            FinMientras
+                                                                        4:
+                                                                            bnd2 <- Falso;
+                                                                    FinSegun
+                                                                    
+                                                                FinMientras
+                                                                
+                                                            2:
+                                                                bnd2 <- Verdadero;
+                                                                Mientras bnd2 = Verdadero Hacer
+                                                                    Escribir "Lista de contactos";
+                                                                    Escribir "";
+                                                                    
+                                                                    si telefono1 >= 0 Entonces
+                                                                        Escribir "Contacto 1";
+                                                                        Escribir "Nombre:         ", contacto1;
+                                                                        Escribir "Organización:   ", org1;
+                                                                        Escribir "Telefono: ", telefono1;
+                                                                        Escribir " ";
+                                                                    SiNo
+                                                                        Escribir "Contacto 1 sin registrar";
+                                                                        Escribir " ";
+                                                                    FinSi
+                                                                    
+                                                                    si telefono2 >= 0 Entonces
+                                                                        Escribir "Contacto 2";
+                                                                        Escribir "Nombre:         ", contacto2;
+                                                                        Escribir "Organización:   ", org2;
+                                                                        Escribir "Telefono:       ", telefono2;
+                                                                        Escribir " ";
+                                                                    SiNo
+                                                                        Escribir "Contacto 2 sin registrar";
+                                                                        Escribir " ";
+                                                                    FinSi
+                                                                    
+                                                                    Si telefono3 >= 0 Entonces
+                                                                        Escribir "Contacto 3";
+                                                                        Escribir "Nombre:         ", contacto3;
+                                                                        Escribir "Organización:   ", org3;
+                                                                        Escribir "Telefono:       ", telefono3;
+                                                                        Escribir " ";
+                                                                        Escribir "Presione una tecla para regresar al menu principal";
+                                                                    SiNo
+                                                                        Escribir "Contacto 3 sin registrar";
+                                                                        Escribir " ";
+                                                                    FinSi
+                                                                    
+                                                                    Escribir "Presione alguna tecla para volver al menu principal";
+                                                                    Esperar Tecla;
+                                                                    bnd2 <- Falso;
+                                                                    
+                                                                FinMientras
+                                                                
+                                                                
+                                                            3:
+                                                                bnd2 <- Verdadero;
+                                                                Mientras bnd2 = Verdadero Hacer
+                                                                    Escribir "Seleccione Contacto que desea eliminar";
+                                                                    Escribir "1. Contacto 1";
+                                                                    Escribir "2. Contacto 2";
+                                                                    Escribir "3. Contacto 3";
+                                                                    Escribir "4. Regresar al Menu Principal";
+                                                                    Leer menu2;
+                                                                    
+                                                                    Segun menu2 Hacer
+                                                                        1:
+                                                                            Si telefono1 >= 0 Entonces
+                                                                                Escribir "Contacto 1 eliminado";
+                                                                                telefono1 <- -1;
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para finalizar";
+                                                                                Esperar Tecla;
+                                                                                bnd2 <- Falso;
+                                                                            SiNo
+                                                                                Escribir "Contacto 1 no existe";
+                                                                                Escribir " ";
+                                                                                Escribir "Presione una tecla para finalizar";
+                                                                                Esperar Tecla;
+                                                                                bnd2 <- Falso;
+                                                                            FinSi
+                                                                        2:
+                                                                            Si telefono2 >= 0 Entonces
+                                                                                Escribir "Contacto 2 eliminado ";
+                                                                                telefono2 <- -1;
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para finalizar";
+                                                                                Esperar Tecla;
+                                                                                bnd2 <- Falso;
+                                                                            SiNo
+                                                                                Escribir "Contacto 2 no existe";
+                                                                                Escribir " ";
+                                                                                Escribir "Presione una tecla para finalizar";
+                                                                                Esperar Tecla;
+                                                                                bnd2 <- Falso;
+                                                                            FinSi
+                                                                        3:
+                                                                            Si telefono3 >= 0 Entonces
+                                                                                Escribir "Contacto 3 eliminado";
+                                                                                telefono3 <- -1;
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para finalizar";
+                                                                                Esperar Tecla;
+                                                                                bnd2 <- Falso;
+                                                                            SiNo
+                                                                                Escribir "Contacto 3 no existe";
+                                                                                Escribir " ";
+                                                                                Escribir "Presione una tecla para finalizar";
+                                                                                Esperar Tecla;
+                                                                                bnd2 <- Falso;
+                                                                            FinSi
+                                                                            
+                                                                        4:
+                                                                            
+                                                                            bnd2 <- Falso;
+                                                                    FinSegun
+                                                                    
+                                                                    
+                                                                FinMientras
+                                                                
+                                                            4:
+                                                                Escribir " ***** Hasta luego *****";
+                                                                Esperar 4 Segundos;				
+                                                                bnd1 <- Falso;
+                                                                
+                                                        FinSegun
+                                                        
+                                                        
+                                                    FinMientras                                            
+                                                    
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 7</span>
+                                  <p>7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+                                </div>
+                                <div class="card-action" id="code71">
+                                    <pre>
+                                        <code>
+                                            Proceso parqueadero_elGuradian
+	
+                                                    //Declarar variables
+                                                    
+                                                    Definir placa1, placa2, placa3, placa4, placa5, buscar_placa Como Entero;
+                                                    Definir marca1, marca2, marca3, marca4, marca5 Como Caracter;
+                                                    Definir nombre1, nombre2, nombre3, nombre4, nombre5 Como Caracter;
+                                                    Definir telefono1, telefono2, telefono3, telefono4, telefono5 Como Caracter;
+                                                    Definir opcion1, opcion2 Como Entero;
+                                                    Definir bnd1, bnd2, bnd3 Como Logico;
+                                                    
+                                                    Placa1 <- -1;
+                                                    Placa2 <- -1;
+                                                    Placa3 <- -1;
+                                                    Placa4 <- -1;
+                                                    Placa5 <- -1;
+                                                    bnd1 <- Verdadero;
+                                                    
+                                                    //Menú principal
+                                                    
+                                                    Mientras bnd1 = Verdadero Hacer
+                                                        
+                                                        Limpiar Pantalla;
+                                                        
+                                                        Escribir "               *********** Parqueadero el Guardian ***********";
+                                                        Escribir " ";
+                                                        Escribir "                          ******* Bienvenido *******";
+                                                        Escribir " ";
+                                                        Escribir "   /////// Elija su opción ///////";
+                                                        Escribir " ";
+                                                        Escribir "1. Registrar ingreso de vehículo";
+                                                        Escribir "2. Registro de salida de vehículo";
+                                                        Escribir "3. Consultar vehículos";
+                                                        Escribir "4. Salir";
+                                                        Leer opcion1;
+                                                        
+                                                        Limpiar Pantalla;
+                                                        
+                                                        //Submenúenú de registro de vehículos al parqueadero
+                                                        
+                                                        Segun opcion1 Hacer
+                                                            1:
+                                                                bnd2 <- Verdadero;
+                                                                Mientras bnd2 = Verdadero Hacer
+                                                                    Escribir "Ingresar vehículo al parqueadero";
+                                                                    Escribir "1. Ingresar Vehículo 1";
+                                                                    Escribir "2. Ingresar Vehículo 2";
+                                                                    Escribir "3. Ingresar Vehículo 3";
+                                                                    Escribir "4. Ingresar Vehículo 4";
+                                                                    Escribir "5. Ingresar Vehículo 5";
+                                                                    Escribir "6. Menú anterior";
+                                                                    Leer opcion2;
+                                                                    
+                                                                    Limpiar Pantalla;
+                                                                    
+                                                                    //Registro de datos del vehículo
+                                                                    
+                                                                    Segun opcion2 Hacer
+                                                                        1:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Ingrese vehículo 1";
+                                                                                Escribir "";
+                                                                                Escribir "Nombre del cliente";
+                                                                                Leer nombre1;
+                                                                                Escribir "Teléfono del cliente";
+                                                                                Leer telefono1;
+                                                                                Escribir "Placa del vehículo";
+                                                                                Leer placa1;
+                                                                                Escribir "Marca del vehículo";
+                                                                                Leer marca1;
+                                                                                Escribir "";
+                                                                                Escribir "*** Vehículo 1 con placa ", placa1, " fue ingresado correctamente ***";
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para menú anterior";
+                                                                                Esperar Tecla;
+                                                                                Limpiar Pantalla;
+                                                                                bnd3 <- Falso;
+                                                                            FinMientras
+                                                                        2:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Ingrese vehículo 2";
+                                                                                Escribir "";
+                                                                                Escribir "Nombre del cliente";
+                                                                                Leer nombre2;
+                                                                                Escribir "Teléfono del cliente";
+                                                                                Leer telefono2;
+                                                                                Escribir "Placa del vehículo";
+                                                                                Leer placa2;
+                                                                                Escribir "Marca del vehículo";
+                                                                                Leer marca2;
+                                                                                Escribir "";
+                                                                                Escribir "*** Vehículo 2 con placa ", placa2, " fue ingresado correctamente ***";
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para menú anterior";
+                                                                                Esperar Tecla;
+                                                                                Limpiar Pantalla;
+                                                                                bnd3 <- Falso;
+                                                                            FinMientras
+                                                                        3:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Ingrese vehículo 3";
+                                                                                Escribir "";
+                                                                                Escribir "Nombre del cliente";
+                                                                                Leer nombre3;
+                                                                                Escribir "Teléfono del cliente";
+                                                                                Leer telefono3;
+                                                                                Escribir "Placa del vehículo";
+                                                                                Leer placa3;
+                                                                                Escribir "Marca del vehículo";
+                                                                                Leer marca3;
+                                                                                Escribir "";
+                                                                                Escribir "*** Vehículo 3 con placa ", placa3, " fue ingresado correctamente ***";
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para menú anterior";
+                                                                                Esperar Tecla;
+                                                                                Limpiar Pantalla;
+                                                                                bnd3 <- Falso;
+                                                                            FinMientras
+                                                                        4:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Ingrese vehículo 4";
+                                                                                Escribir "";
+                                                                                Escribir "Nombre del cliente";
+                                                                                Leer nombre4;
+                                                                                Escribir "Teléfono del cliente";
+                                                                                Leer telefono5;
+                                                                                Escribir "Placa del vehículo";
+                                                                                Leer placa6;
+                                                                                Escribir "Marca del vehículo";
+                                                                                Leer marca6;
+                                                                                Escribir "";
+                                                                                Escribir "*** Vehículo 4 con placa ", placa4, " fue ingresado correctamente ***";
+                                                                                Escribir "";
+                                                                                Escribir"Presione una tecla para menú anterior";
+                                                                                Esperar Tecla;
+                                                                                Limpiar Pantalla;
+                                                                                bnd3 <- Falso;
+                                                                            FinMientras
+                                                                        5:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Ingrese vehículo 5";
+                                                                                Escribir "";
+                                                                                Escribir "Nombre del cliente";
+                                                                                Leer nombre5;
+                                                                                Escribir "Teléfono del cliente";
+                                                                                Leer telefono5;
+                                                                                Escribir "Placa del vehículo";
+                                                                                Leer placa5;
+                                                                                Escribir "Marca del vehículo";
+                                                                                Leer marca5;
+                                                                                Escribir "";
+                                                                                Escribir "*** Vehículo 5 con placa ", placa5, " fue ingresado correctamente ***";
+                                                                                Escribir "";
+                                                                                Escribir"Presione una tecla para menú anterior";
+                                                                                Esperar Tecla;
+                                                                                Limpiar Pantalla;
+                                                                                bnd3 <- Falso;
+                                                                            FinMientras
+                                                                        6:
+                                                                            bnd2 <- Falso;
+                                                                            Limpiar Pantalla;
+                                                                            
+                                                                    FinSegun
+                                                                    
+                                                                FinMientras                                                                
+                                                                
+                                                            2:  //Submenú de retiro de vehículo
+                                                                bnd2 <- Verdadero;
+                                                                Mientras bnd2 = Verdadero Hacer
+                                                                    Escribir "Seleccione Vehiculo que desea Retirar";
+                                                                    Escribir "";
+                                                                    Escribir "1. Vehículo 1";
+                                                                    Escribir "2. Vehículo 2";
+                                                                    Escribir "3. Vehículo 3";
+                                                                    Escribir "4. Vehículo 4";
+                                                                    Escribir "5. Vehículo 5";
+                                                                    Escribir "6. Menú Principal";
+                                                                    Leer opcion2;
+                                                                    
+                                                                    //Datoss del vehículo para retirar
+                                                                    Segun opcion2 Hacer
+                                                                        1:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique placa del vehículo";
+                                                                                Leer placa1;
+                                                                                si placa1 >= 0 Entonces
+                                                                                    Escribir "*** Vehículo 1 con placa ", placa1, " retirado ***";
+                                                                                    placa1<- -1;
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "No hay vehículo registrado con ese número de placa";
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                FinSi
+                                                                            FinMientras
+                                                                            
+                                                                        2:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique placa del vehículo";
+                                                                                Leer placa2;
+                                                                                si placa2 >= 0 Entonces
+                                                                                    Escribir "*** Vehículo 2 con placa ", placa2, " retirado ***";
+                                                                                    placa2<- -1;
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "No hay vehículo registrado con ese número de placa";
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                FinSi
+                                                                            FinMientras
+                                                                            
+                                                                        3:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique placa del vehículo";
+                                                                                Leer placa3;
+                                                                                si placa3 >= 0 Entonces
+                                                                                    Escribir "*** Vehículo 3 con placa ", placa3, " retirado ***";
+                                                                                    Limpiar Pantalla;
+                                                                                    placa3<- -1;
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "No hay vehículo registrado con ese número de placa";
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                FinSi
+                                                                                
+                                                                            FinMientras
+                                                                        4:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique placa del vehículo";
+                                                                                Leer placa4;
+                                                                                si placa4 >= 0 Entonces
+                                                                                    Escribir "*** Vehículo 4 con placa ", placa4, " retirado ***";
+                                                                                    Limpiar Pantalla;
+                                                                                    placa4<- -1;
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "No hay vehículo registrado con ese número de placa";
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                FinSi
+                                                                                
+                                                                            FinMientras
+                                                                        5:
+                                                                            bnd3 <- Verdadero;
+                                                                            Mientras bnd3 = Verdadero Hacer
+                                                                                Escribir "Indique placa del vehículo";
+                                                                                Leer placa5;
+                                                                                si placa5 >= 0 Entonces
+                                                                                    Escribir "*** Vehículo 5 con placa ", placa5, " retirado ***";
+                                                                                    Limpiar Pantalla;
+                                                                                    placa5<- -1;
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                SiNo
+                                                                                    Escribir "No hay vehículo registrado con ese número de placa";
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menú anterior";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd3 <- Falso;
+                                                                                FinSi
+                                                                                
+                                                                            FinMientras
+                                                                            
+                                                                        6:
+                                                                            Limpiar Pantalla;
+                                                                            bnd2<- Falso;                                                                           
+                                                                            
+                                                                    FinSegun
+                                                                FinMientras
+                                                                
+                                                            3:
+                                                                //Consulta de vehículos en el parqueadero
+                                                                bnd2 <- Verdadero;
+                                                                Mientras bnd2 = Verdadero Hacer
+                                                                    Escribir "Indique número de placa del vehículo";
+                                                                    Leer buscar_placa;
+                                                                    
+                                                                    si buscar_placa = placa1 o buscar_placa = placa2 o buscar_placa = placa3 o buscar_placa = placa4 o buscar_placa = placa5 Entonces
+                                                                        Escribir "El vehículo se encuentra en el estacionamiento";
+                                                                        Escribir "";
+                                                                        Escribir "Presione una tecla para ir al Menú Principal";
+                                                                        Esperar Tecla;
+                                                                        Limpiar Pantalla;
+                                                                        bnd2 <- Falso;
+                                                                    SiNo
+                                                                        Escribir "El vehículo no está registrado";
+                                                                        Escribir "";
+                                                                        Escribir "Presione una tecla para ir al Menú Principal";
+                                                                        Esperar Tecla;
+                                                                        Limpiar Pantalla;
+                                                                        bnd2 <- Falso;
+                                                                    FinSi
+                                                                    
+                                                                FinMientras
+                                                            4:
+                                                                //Opción de salida del menú principal
+                                                                Escribir " ";
+                                                                Escribir "            *********** ¡Vuelva pronto! ***********";
+                                                                Escribir " ";
+                                                                Escribir "                  ******* Hasta luego *******";
+                                                                Esperar 4 Segundos;
+                                                                Limpiar Pantalla;
+                                                                bnd1<-Falso; 
+                                                                
+                                                        FinSegun
+                                                        
+                                                    FinMientras
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                  <span class="card-title">Ejercicio 8</span>
+                                  <p>8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+                                </div>
+                                <div class="card-action" id="code81">
+                                    <pre>
+                                        <code>
+                                            Proceso autoescuela_elMaestro
+	
+                                                //Declaración de variables
+                                                
+                                                Definir nombre1, nombre2, nombre3, nombre4, nombre5, nombre6, nombre7, nombre8 Como Caracter;
+                                                Definir cedula1, cedula2, cedula3, cedula4, cedula5, cedula6, cedula7, cedula8, cedula_buscar Como Entero;
+                                                Definir nota1, nota2, nota3, nota4, nota5, nota6, nota7, nota8 Como Real;
+                                                Definir opcion1, opcion2 Como Entero;
+                                                Definir bnd1, bnd2, bnd3 Como Logico;
+                                                
+                                                
+                                                    
+                                                //Menú principal
+                                                
+                                                bnd1 <- Verdadero;
+                                                Mientras bnd1 = Verdadero Hacer
+                                                    
+                                                    Limpiar Pantalla;
+                                                    
+                                                    Escribir " ";
+                                                    Escribir "       ******* Escuela Automovilística El Maestro *******";
+                                                    Escribir "";
+                                                    Escribir "                         Menu Principal            ";
+                                                    Escribir " ";
+                                                    Escribir "       //// Indique su opción  ////";
+                                                    Escribir " ";
+                                                    Escribir "1. Registar nuevo usuario";
+                                                    Escribir "2. Consulta de usuario y datos de la prueba";
+                                                    Escribir "3. Salir";
+                                                    Leer opcion1;
+                                                    
+                                                    Limpiar Pantalla;
+                                                    
+                                                    Segun opcion1 Hacer
+                                                        1:
+                                                            bnd2 <- Verdadero;
+                                                            Mientras  bnd2 = Verdadero Hacer
+                                                                
+                                                                Escribir "Seleccione Usuario que desea ingresar";
+                                                                Escribir "";
+                                                                Escribir "1. Alumno 1";
+                                                                Escribir "2. Alumno 2";
+                                                                Escribir "3. Alumno 3";
+                                                                Escribir "4. Alumno 4";
+                                                                Escribir "5. Alumno 5";
+                                                                Escribir "6. Alumno 6";
+                                                                Escribir "7. Alumno 7";
+                                                                Escribir "8. Alumno 8";
+                                                                Escribir "9. Volver al Menu Principal";
+                                                                Leer opcion2;
+                                                                
+                                                                Limpiar Pantalla;
+                                                                
+                                                                Segun opcion2 Hacer
+                                                                    1:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 1";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre1;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula1;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer nota1;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    2:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 2";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre2;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula2;
+                                                                            Escribir "Ingrese la calificación Obtenidad por el Alumno";
+                                                                            Leer nota2;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    3:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 3";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre3;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula3;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer nota3;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    4:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 4";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer Nombre4;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer Cedula4;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer Nota4;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    5:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 5";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre5;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula5;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer nota5;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    6:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 6";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre6;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula6;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer nota6;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    7:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 7";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre7;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula7;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer nota7;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    8:
+                                                                        bnd3 <- Verdadero;
+                                                                        Mientras bnd3 = Verdadero Hacer
+                                                                            Escribir "Alumno 8";
+                                                                            Escribir "Ingrese nombre del alumno";
+                                                                            Leer nombre8;
+                                                                            Escribir "Ingrese documento de indentidad del alumno";
+                                                                            Leer cedula8;
+                                                                            Escribir "Ingrese la calificación obtenidad por el alumno";
+                                                                            Leer nota8;
+                                                                            Escribir "Presione una tecla para menú anterior";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd3 <- Falso;
+                                                                        FinMientras
+                                                                    9:
+                                                                        bnd2 <- Falso;
+                                                                FinSegun
+                                                            FinMientras
+                                                        2:
+                                                            //Consulta de resultados de la prueba
+                                                            
+                                                            bnd2 <- Verdadero;
+                                                            Mientras bnd2 = Verdadero Hacer
+                                                                Escribir "Ingrese el número de documento del alumno";
+                                                                leer cedula_buscar;
+                                                                si cedula_buscar = cedula1 Entonces
+                                                                    Escribir nombre1, " presentó la prueba";
+                                                                    Escribir "La calificación fue de: ", nota1;
+                                                                    si nota1 >= 3.0 Entonces
+                                                                        Escribir "El alumno aprobó la prueba";
+                                                                    SiNo
+                                                                        Escribir "El alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                    FinSi
+                                                                    Escribir "";
+                                                                    Escribir "Presione una tecla para menu principal";
+                                                                    Esperar Tecla;
+                                                                    Limpiar Pantalla;
+                                                                    bnd2 <- Falso;
+                                                                    
+                                                                SiNo
+                                                                    si cedula_buscar = cedula2 Entonces
+                                                                        Escribir  nombre2, " presentó la prueba";
+                                                                        Escribir "La calificación fue de: ", nota2;
+                                                                        si nota2 >= 3.0 Entonces
+                                                                            Escribir "El alumno aprobó la prueba";
+                                                                        SiNo
+                                                                            Escribir "El alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                        FinSi
+                                                                        Escribir "";
+                                                                        Escribir "Presione una tecla para menu principal";
+                                                                        Esperar Tecla;
+                                                                        Limpiar Pantalla;
+                                                                        bnd2 <- Falso;
+                                                                        
+                                                                    SiNo
+                                                                        si cedula_buscar = cedula3 Entonces
+                                                                            Escribir nombre3, " presentó la prueba";
+                                                                            Escribir "La calificacin fue de: ", nota3;
+                                                                            si nota3 >= 3.0 Entonces
+                                                                                Escribir "El alumno aprobó la prueba";
+                                                                            SiNo
+                                                                                Escribir "Alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                            FinSi
+                                                                            Escribir "";
+                                                                            Escribir "Presione una tecla para menu principal";
+                                                                            Esperar Tecla;
+                                                                            Limpiar Pantalla;
+                                                                            bnd2 <- Falso;
+                                                                            
+                                                                        SiNo
+                                                                            si cedula_buscar = cedula4 Entonces
+                                                                                Escribir nombre4, " presentó la prueba";
+                                                                                Escribir "La calificacin fue de: ", nota4;
+                                                                                si nota4 >= 3.0 Entonces
+                                                                                    Escribir "El alumno aprobó la prueba";
+                                                                                SiNo
+                                                                                    Escribir "Alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                                FinSi
+                                                                                Escribir "";
+                                                                                Escribir "Presione una tecla para menu principal";
+                                                                                Esperar Tecla;
+                                                                                Limpiar Pantalla;
+                                                                                bnd2 <- Falso;
+                                                                                
+                                                                            SiNo
+                                                                                si cedula_buscar = cedula5 Entonces
+                                                                                    Escribir nombre5, " presentó la prueba";
+                                                                                    Escribir "La calificacion fue de: ", nota5;
+                                                                                    si nota5 >= 3.0 Entonces
+                                                                                        Escribir "El alumno aprobo la Prueba";
+                                                                                    SiNo
+                                                                                        Escribir "Alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                                    FinSi
+                                                                                    Escribir "";
+                                                                                    Escribir "Presione una tecla para menu principal";
+                                                                                    Esperar Tecla;
+                                                                                    Limpiar Pantalla;
+                                                                                    bnd2 <- Falso;
+                                                                                    
+                                                                                SiNo
+                                                                                    si cedula_buscar = cedula6 Entonces
+                                                                                        Escribir nombre6, " presentó la prueba";
+                                                                                        Escribir "La calificacion fue de: ", nota6;
+                                                                                        si nota6 >= 3.0 Entonces
+                                                                                            Escribir "El alumno aprobó la prueba";
+                                                                                        SiNo
+                                                                                            Escribir "El alumno reprobó la Prueba por lo cual debe volver a realizarla";
+                                                                                        FinSi
+                                                                                        Escribir "";
+                                                                                        Escribir "Presione una tecla para menu principal";
+                                                                                        Esperar Tecla;
+                                                                                        Limpiar Pantalla;
+                                                                                        bnd2 <- Falso;
+                                                                                    SiNo
+                                                                                        si cedula_buscar = cedula7 Entonces
+                                                                                            Escribir nombre7, " presentó la prueba";
+                                                                                            Escribir "La calificacion fue de: ", nota7;
+                                                                                            si nota7 >= 3.0 Entonces
+                                                                                                Escribir "El alumno aprobo la rueba";
+                                                                                            SiNo
+                                                                                                Escribir "Alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                                            FinSi
+                                                                                            Escribir "";
+                                                                                            Escribir "Presione una tecla para menu principal";
+                                                                                            Esperar Tecla;
+                                                                                            Limpiar Pantalla;
+                                                                                            bnd2 <- Falso;
+                                                                                        SiNo
+                                                                                            si cedula_buscar = cedula8 Entonces
+                                                                                                Escribir nombre8, " presentó la prueba";
+                                                                                                Escribir "La calificacion fue de: ", nota8;
+                                                                                                si Nota8 >= 3.0 Entonces
+                                                                                                    Escribir "El alumno aprobó la prueba";
+                                                                                                SiNo
+                                                                                                    Escribir "El alumno reprobó la prueba por lo cual debe volver a realizarla";
+                                                                                                FinSi
+                                                                                                Escribir "";
+                                                                                                Escribir "Presione una tecla para menú principal";
+                                                                                                Esperar Tecla;
+                                                                                                Limpiar Pantalla;
+                                                                                                bnd2 <- Falso;
+                                                                                            SiNo
+                                                                                                Escribir "El número de documento ingresado no se encuentra en nuestro sistema";
+                                                                                                Escribir "";
+                                                                                                Escribir "Presione una tecla para ir al menu principal";
+                                                                                                Esperar Tecla;
+                                                                                                Limpiar Pantalla;
+                                                                                                bnd2 <- Falso;
+                                                                                            FinSi
+                                                                                        FinSi
+                                                                                    FinSi
+                                                                                FinSi
+                                                                            FinSi
+                                                                        FinSi
+                                                                    FinSi
+                                                                FinSi
+                                                            FinMientras
+                                                        3:
+                                                            
+                                                            Escribir " ";
+                                                            Escribir "                  ******* Gracias por preferirnos *******";
+                                                            Esperar 4 Segundos;
+                                                            Limpiar Pantalla;
+                                                            bnd1 <- Falso;
+                                                    FinSegun
+
+                                                FinMientras                                              
+                                                                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>

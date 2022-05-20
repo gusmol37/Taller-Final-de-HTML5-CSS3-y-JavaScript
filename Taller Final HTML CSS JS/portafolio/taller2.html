@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Taller final de HTML5, CSS3 y JavaScript"/>
+        <title>Portafolio</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&display=swap" rel="stylesheet">
+        
+        <script src="javascript/bookstores/jquery.3.3.1.js"></script>
+        <script src="javascript/bookstores/materialize.js"></script>
+        <script src="javascript/bookstores/init.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="parallax-container" id="taller1">
+                <p>Taller 2. Condicionales. PSeInt.</p>
+                <div class="parallax"><img src="images/blue_neon.jpeg"></div>
+            </div>
+        </header>
+        <nav>
+            <ul class="tabs">
+                <li class="tab col s3"><a id="back" onclick="window.history.go(-1)">Ir a Página Principal</a></li>
+            </ul>
+        </nav>
+        <main>
+            <ul class="collection">
+                <li class="collection-item">
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 1</span>
+                                    <p>1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+                                </div>
+                                <div class="card-action" id="code1">
+                                    <pre>
+                                        <code>
+                                            Proceso mayor_edad
+                                                
+                                                Definir edad Como Entero;
+                                                
+                                                Escribir "Por favor, indique su edad.";
+                                                Leer edad;
+                                                
+                                                Si edad >= 18 Entonces
+                                                    Escribir "Usted es mayor de edad.";
+                                                FinSi
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 2</span>
+                                    <p>2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+                                </div>
+                                <div class="card-action" id="code2">
+                                    <pre>
+                                        <code>
+                                            Proceso menor_edad
+	
+                                                Definir edad Como Entero;
+                                                
+                                                Escribir "Por favor, indique su edad.";
+                                                Leer edad;
+                                                
+                                                Si edad < 18 Entonces
+                                                    Escribir "Usted aún es un niño.";
+                                                FinSi
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 3</span>
+                                    <p>3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p>
+                                </div>
+                                <div class="card-action" id="code3">
+                                    <pre>
+                                        <code>
+                                            Proceso edad_fiesta
+	
+                                                Definir edad Como Entero;
+                                                Definir nombre Como Caracter;
+                                                Definir apellidos Como Caracter;
+                                                
+                                                Escribir "Por favor, indique su nombre.";
+                                                Leer nombre;
+                                                Escribir "Por favor, indique sus apellidos.";
+                                                Leer apellidos;
+                                                Escribir "Por favor, indique su edad.";
+                                                Leer edad;
+                                                
+                                                Limpiar Pantalla;
+                                                
+                                                Si edad >= 18 Entonces
+                                                    Escribir nombre," ",apellidos," ","usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+                                                SiNo
+                                                    Escribir nombre," ",apellidos," ","usted es menor de edad, por lo tanto no puede entrar a la fiesta. Por favor, devuélvase para su casa.";
+                                                    
+                                                FinSi
+                                                
+                                            FinProceso
+                                        
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 4</span>
+                                    <p>4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+                                </div>
+                                <div class="card-action" id="code4">
+                                    <pre>
+                                        <code>
+                                            Proceso alquiler_peliculas
+	
+                                                Definir opcion_menu Como Entero;
+                                                Definir nombre Como Caracter;
+                                                Definir apellidos Como Caracter;
+                                                Definir opcion_pelicula1 Como Entero;
+                                                Definir opcion_pelicula2 Como Entero;
+                                                Definir observacion Como Caracter;
+                                                Definir otra_pelicula Como Entero;
+                                                Definir pelicula_recibida Como Caracter;
+                                                Definir id_cliente Como Entero;
+                                                Definir fecha_recepcion Como Caracter;
+                                                
+                                                Escribir " ";
+                                                Escribir "             ******* Club de Alquiler de Películas Suba *******";
+                                                Escribir "                         ******* Bienvenido *******";
+                                                Escribir " ";
+                                                
+                                                Escribir " * Indique nombre del cliente";
+                                                Leer nombre;
+                                                
+                                                Escribir " * Indique apellidos del cliente";
+                                                Leer apellidos;
+                                                
+                                                Escribir " * Indica número de identificación del cliente";
+                                                Leer id_cliente;
+                                                
+                                                Limpiar Pantalla;
+                                                
+                                                Escribir " * Elije tu opción:";
+                                                Escribir " ";
+                                                Escribir "1. Alquiler de película.";
+                                                Escribir "2. Recibir Película.";
+                                                Leer opcion_menu;                                            
+                                         
+                                                Segun  opcion_menu Hacer                                                        
+                                                        
+                                                    1:  Escribir "     ***** El alquiler por día es de $2000. El tiempo excedente $1000 por día. *****    "; 
+                                                        Escribir " ";
+                                                        Escribir " * Seleccione la película.";
+                                                        Escribir " ";
+                                                        Escribir "1. Matrix Resurrección";
+                                                        Escribir "2. Sonic 2.";
+                                                        Escribir "3. Operation Overlord.";
+                                                        Escribir "4. Encanto.";
+                                                        Leer opcion_pelicula1;
+                                                        
+                                                        
+                                                        Segun opcion_pelicula1 Hacer
+
+                                                            1:
+                                                                Escribir "******* Matrix Resurrección ha sido agregada al carrito. *******";
+                                                                Escribir " ";
+                                                            2:
+                                                                Escribir "******* Sonic 2 ha sido agreagada al carrito *******.";
+                                                                Escribir " ";
+                                                            3:
+                                                                Escribir "******* Operation Overload ha sido agregada al carrito. *******";
+                                                                Escribir " ";
+                                                            4:
+                                                                Escribir "******* Encanto ha sido agregada al carrito. *******";
+                                                                Escribir " ";
+                                                                
+                                                            De Otro Modo:
+                                                                Escribir "Esta opción no está disponible.";
+                                                                Escribir " ";
+                                                                
+                                                        FinSegun			
+                                                        
+                                                        Escribir "¿Deseas agregar otra película? Elije tu opción.";
+                                                        Escribir "1. Sí";
+                                                        Escribir "0. No";						
+                                                        Leer otra_pelicula;
+                                                        
+                                                        Limpiar Pantalla;
+                                                        
+                                                        Si otra_pelicula = 1 Entonces
+                                                            
+                                                            Escribir " ";
+                                                            Escribir "     ***** El alquiler por día es de $2000. El tiempo excedente $1000 por día adicional. *****    "; 
+                                                            Escribir " ";
+                                                            
+                                                            Escribir " * Selecciona una película.";
+                                                            Escribir " ";
+                                                            Escribir "1. Sonic 2.";
+                                                            Escribir "2. Operation Overlord.";
+                                                            Escribir "3. Encanto.";
+                                                            Leer opcion_pelicula2;
+                                                            
+                                                            
+                                                                Segun opcion_pelicula2 Hacer
+
+                                                                        1:
+                                                                            Escribir "******* Sonic 2 ha sido agreagada al carrito *******.";
+                                                                            Escribir " ";
+                                                                        2:
+                                                                            Escribir "******* Operation Overload ha sido agregada al carrito. *******";
+                                                                            Escribir " ";
+                                                                        3:
+                                                                            Escribir "******* Encanto ha sido agregada al carrito. *******";
+                                                                            Escribir " ";
+                                                                        De Otro Modo:
+                                                                            Escribir "Esta opción no está disponible.";
+
+                                                                    FinSegun
+                                                                    
+                                                                    Escribir "¿Deseas agregar otra película? Elija su opción.";
+                                                                    Escribir "1. Sí";
+                                                                    Escribir "0. No";
+                                                                    Leer otra_pelicula;
+                                                                    
+                                                                    Escribir "           ******* Has agregado dos películas al carrito ¡Que las disfrutes! *******";
+                                                                    
+                                                                    Esperar 5 Segundos;
+                                                                    
+                                                                FinSi
+                                                                
+                                                                Limpiar Pantalla;	
+
+                                                     2:	
+                                                        Escribir "Ingrese el nombre de la película recibida.";
+                                                        Leer pelicula_recibida;
+                                                                
+                                                        Escribir "Ingrese feccha de recepción de la película";
+                                                        Leer fecha_recepcion;
+                                                                
+                                                        Escribir "Observacion: ";
+                                                        Leer observacion;
+                                                                
+                                                        Escribir "******* La película ha sido recibida correctamente";                                                           
+                                                        
+                                                FinSegun		
+                                                    
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 5</span>
+                                    <p>5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+                                </div>
+                                <div class="card-action" id="code5">
+                                    <pre>
+                                        <code>
+                                            Proceso drogueria_miSalud
+	
+                                                    //Declarar variables
+                                                    
+                                                    Definir nombre_cliente Como Caracter;
+                                                    Definir apellidos_cliente Como Caracter;	
+                                                    Definir id_cliente Como Caracter;
+                                                    Definir nombre_producto Como Caracter;
+                                                    Definir precio Como Real;
+                                                    Definir devolver Como Caracter;
+                                                    Definir comprar Como Caracter;
+                                                    Definir producto Como Entero;
+                                                    Definir cantidad Como Entero;
+                                                    Definir opcion_menu Como Real;
+                                                    Definir obsevaciones Como Caracter;
+                                                    Definir direccion Como Caracter; 
+                                                    Definir consulta Como Entero;
+                                                    
+                                                    //Ingresar datos de identificación cliente
+                                                    
+                                                    Escribir "******* Bienvenido a Drogueria Mi Salud *******";
+                                                    
+                                                    Escribir " * Indique su nombre ";
+                                                    Leer nombre_cliente;
+                                                    
+                                                    Escribir " * Indique sus apellidos ";
+                                                    Leer apellidos_cliente;
+                                                    
+                                                    Escribir " * Indique su número de identificación.";
+                                                    Leer id_cliente;
+                                                    
+                                                    Escribir " * Indique su dirección.";
+                                                    Leer direccion;
+                                                    
+                                                    Limpiar Pantalla;
+                                                    
+                                                        
+                                                    Escribir "******* Elija su opción *******";
+                                                    Escribir "1. Consultar Producto.";
+                                                    Escribir "2. Devolver producto";
+                                                    Leer opcion_menu;
+                                                    
+                                                    Segun opcion_menu Hacer
+                                                        
+                                                        1:Escribir "*** Producto a consultar. Elija su opción ***";
+
+                                                            Escribir "1. Acetaminofén";
+                                                            Escribir "2. Ampicilina";
+                                                            Escribir "3. Hidrocodeina + Bitartrato";
+                                                            Escribir "4. Dipirona";
+                                                            Leer producto;
+                                                            
+                                                            Segun producto hacer
+                                                                
+                                                                1: Escribir "Acetaminofen 500 mg";
+                                                                Escribir "Tipo de uso: analgésico, antipirético";
+                                                                Escribir "Presentación: grageas";
+                                                                Escribir "Precio: $7000";
+                                                                Escribir "¿Comprar? s (Sí)   n (No)";
+                                                                Leer comprar;
+                                                                Si comprar = "s" Entonces
+                                                                    Escribir "Indique cantidad";
+                                                                    Leer cantidad;
+                                                                    Escribir "Estamos procesando su orden. Por favor, espere.";
+                                                                    Esperar 4 Segundos;
+                                                                    Limpiar Pantalla;
+                                                                    Escribir "Muchas gracias ", nombre_cliente, " ", apellidos_cliente, " por su compra. Enviaremos su Acetaminofén 500 mg a la siguiente dirección: ", direccion;
+                                                                FinSi
+                                                                
+                                                                2: Escribir "Ampicilina 500 mg";
+                                                                    Escribir "Tipo de uso: antibiótico";
+                                                                    Escribir "Presentación: cápsulas";
+                                                                    Escribir "Precio: $9000";
+                                                                    Escribir "¿Comprar? s (Sí)   n (No)";
+                                                                    Leer comprar;
+                                                                    Si comprar = "s" Entonces
+                                                                        Escribir "Indique cantidad";
+                                                                        Leer cantidad;
+                                                                        Escribir "Estamos procesando su orden. Por favor, espere.";
+                                                                        Esperar 4 Segundos;
+                                                                        Limpiar Pantalla;
+                                                                        Escribir "Muchas gracias ", nombre_cliente, " ", apellidos_cliente, " por su compra. Enviaremos su Ampicilina 500 mg a la siguiente dirección: ", direccion;
+                                                                    FinSi
+                                                                    
+                                                                3:  Escribir "Hidrocodeina + Bitartrato";
+                                                                    Escribir "Tipo de uso: antitusígeno, espectorante";
+                                                                    Escribir "Presentación: frasco 150 ml";
+                                                                    Escribir "Precio: $6500";
+                                                                    Escribir "¿Comprar? s (Sí)   n (No)";
+                                                                    Leer comprar;
+                                                                    Si comprar = "s" Entonces
+                                                                        Escribir "Indique cantidad";
+                                                                        Leer cantidad;
+                                                                        Escribir "Estamos procesando su orden. Por favor, espere.";
+                                                                        Esperar 4 Segundos;
+                                                                        Limpiar Pantalla;
+                                                                        Escribir "Muchas gracias ", nombre_cliente, " ", apellidos_cliente, " por su compra. Enviaremos su Hidrocodeina + Bitartrato 150 ml a la siguiente dirección: ", direccion;
+                                                                    FinSi
+                                                                    
+                                                                4: Escribir "Dipirona 20 mg";
+                                                                    Escribir "Tipo de uso: analgésico, antinflamatorio";
+                                                                    Escribir "Presentación: grageas";
+                                                                    Escribir "Precio: $9000";
+                                                                    Escribir "¿Comprar? s (Sí)   n (No)";
+                                                                    Leer comprar;
+                                                                    Si comprar = "s" Entonces
+                                                                        Escribir "Indique cantidad";
+                                                                        Leer cantidad;
+                                                                        Escribir "Estamos procesando su orden. Por favor, espere.";
+                                                                        Esperar 4 Segundos;
+                                                                        Limpiar Pantalla;
+                                                                        Escribir "Muchas gracias ", nombre_cliente, " ", apellidos_cliente, " por su compra. Enviaremos su Dipirona 20 mg a la siguiente dirección: ", direccion;
+                                                                    FinSi
+                                                            FinSegun
+						
+                                                        2:Escribir "Que producto desea devolver";
+
+                                                            Escribir "1. Acetaminofen 500 mg";
+                                                            Escribir "2. Ampicilina 500 mg";
+                                                            Escribir "3. Hidrocodeina + Bitartrato";
+                                                            Escribir "4. Dipirona 20 mg";
+                                                            Leer consulta;
+                                                            Segun consulta Hacer
+                                                                1: 
+                                                                    Escribir "Precio: $7000.";
+                                                                    Escribir "¿Está seguro que desea devolverlo? s (Sí)  n (No)";
+                                                                    Leer devolver;
+                                                                    Si devolver = "s" Entonces
+                                                                        Escribir "Producto devuelto.";
+                                                                    FinSi
+                                                                2: 
+                                                                    Escribir "Su valor es de: $9000";
+                                                                    Escribir "¿Está seguro que desea devolverlo? s (Sí)  n (No)";
+                                                                    Leer devolver;
+                                                                    Si devolver = "s" Entonces
+                                                                        Escribir "Producto devuelto.";
+                                                                    FinSi
+                                                                3: 
+                                                                    Escribir "Su valor es de: $6500";
+                                                                    Escribir "¿Está seguro que desea devolverlo? s (Sí)  n (No)";
+                                                                    Leer devolver;
+                                                                    Si devolver = "s" Entonces
+                                                                        Escribir "Producto devuelto.";
+                                                                    FinSi
+                                                                4: 
+                                                                    Escribir "Su valor es de: $9000";
+                                                                    Escribir "¿Está seguro que desea devolverlo? s (Sí)  n (No)";
+                                                                    Leer devolver;
+                                                                    Si devolver = "s" Entonces
+                                                                        Escribir "Producto devuelto.";
+                                                                    FinSi
+                                                            FinSegun                                                        
+                                             
+                                                    FinSegun                                                 
+                                           
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 6</span>
+                                    <p>6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+                                </div>
+                                <div class="card-action" id="code6">
+                                    <pre>
+                                        <code>
+                                            Proceso taller_motos
+	
+                                                        Definir id_cliente Como caracter;
+                                                        Definir nombre_cliente Como Caracter;
+                                                        Definir marca Como Caracter;
+                                                        Definir placa Como Caracter;
+                                                        Definir tipo_moto Como Caracter;
+                                                        Definir opcion_menu Como Entero;
+                                                        Definir observaciones Como Caracter;
+                                                        Definir diagnostico Como Entero;
+                                                        Definir dato Como Entero;
+                                                        Definir fecha_ingreso Como Caracter;
+                                                
+                                                        Escribir "                                                      ";
+                                                        Escribir " *********** Taller de Motos El Maquinista ***********";
+                                                        Escribir " ";
+                                                        Escribir "               ******* Bienvenido ******* ";
+                                                        Escribir "                                                      ";
+                                                        Escribir "Registro de ingreso.";
+                                                        Escribir "                                                      ";
+                                                        
+                                                        Escribir "Indique su número de identificación";
+                                                        Leer id_cliente;
+                                                        
+                                                        Escribir "Indique nombres y apellidos";
+                                                        leer nombre_cliente;
+                                                        
+                                                        Escribir "Indique la Marca de su Moto";
+                                                        Leer marca;
+                                                        
+                                                        Escribir "Indique número de placa";
+                                                        Leer placa;
+                                                        
+                                                        Escribir "Indique tipo de moto";
+                                                        Leer tipo_moto;
+                                                        
+                                                        Escribir "Fecha de ingreso a revisión.";
+                                                        Leer fecha_ingreso;
+                                                        
+                                                        Limpiar Pantalla;	
+                                            
+                                                
+                                                        Escribir "Servicio solicitado:";
+                                                        Escribir "                                                    ";
+                                                        Escribir "1. Ingresar Revisión";
+                                                        Escribir " ";
+                                                        Escribir "2. Retirar Moto";
+                                                        Escribir "                                                    ";
+                                                        Escribir "3. Observaciones de la revisión";
+                                                        Escribir "                                                    ";
+                                                        Leer opcion_menu;
+                                            
+                                            
+                                                Segun opcion_menu Hacer
+                                                    1:
+                                                        Escribir nombre_cliente," ", "su moto", " ", marca, " ",  "placa", " ",placa , " ", "fue ingresada el ", fecha_ingreso, ", para mantenimiento trimestral de sistema de frenos y cambio de aceite de motor." ;
+                                                        Escribir "Indique observaciones.";
+                                                        leer observaciones;
+                                                        
+                                                        Escribir nombre_cliente," ", "se han registrado las siguientes observaciones" , "  ", observaciones;
+                                                    2:
+                                                        Escribir nombre_cliente," ", " su moto "," ", marca, " ", "placa", " ", placa , " ", " se encuentra en despacho para ser retirada ";
+                                                    3: 
+                                                        Escribir nombre_cliente, " ", " luego de la revisión, se procedió a verificar el proceso de emisión de gases y se realizó el cambio de aceite del motor y del respectivo filtro de aceite. De igual manera, se hizo revisión del sistema de frenos realizando el cambio de pastillas y completando los niveles del liquido de frenos.";
+                                                        
+                                                        
+                                                        
+                                                    De Otro Modo:			Escribir  "Opción incorrecta. Por favor, intente de nuevo.";
+                                                FinSegun
+                                            
+                                        FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 7</span>
+                                    <p>7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+                                </div>
+                                <div class="card-action" id="code7">
+                                    <pre>
+                                        <code>
+                                            Proceso indice_masa_corporal
+
+                                                Definir nombre_usuario Como Caracter;
+                                                Definir peso_usuario Como Real;
+                                                Definir estatura Como Real;
+                                                Definir imc Como Real;
+                                                
+                                                Escribir "                                                     ";
+                                                Escribir "*********** Secretaria de Salud Municipal ***********";
+                                                Escribir "                                                     ";
+                                                Escribir "                *** Bienvenido ***";
+                                                Escribir "                                                     ";
+                                                Escribir "Determine su Indice de Masa Corporal";
+                                                Escribir "  													";
+                                                
+                                                Escribir "indique su nombre";
+                                                Leer nombre_usuario;
+                                                Escribir "Indique tu peso en (Kgs)";
+                                                Leer peso_usuario;
+                                                Escribir "Escribe tu Estatura en metros";
+                                                Leer estatura;
+                                                
+                                                imc <- peso_usuario/estatura^2;
+                                                Escribir "  													";
+                                                Escribir "Estimado usuario ", nombre_usuario, ","," su IMC es de: ", imc;
+                                                
+                                                Si (imc < 18.5) Entonces
+                                                    Escribir "Estas en un peso bajo";
+                                                SiNo
+                                                    Si (imc >= 18.5 y imc < 25) Entonces
+                                                        Escribir "Su peso es normal";
+                                                    SiNo
+                                                        Si (imc >= 25 y imc < 30) Entonces
+                                                            Escribir "Tiene sobrepeso";
+                                                        SiNo
+                                                            Si (imc >= 30) Entonces
+                                                                Escribir "Tiene obesidad";
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                FinSi
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 8</span>
+                                    <p>8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+                                </div>
+                                <div class="card-action" id="code8">
+                                    <pre>
+                                        <code>
+                                            Proceso pasteleria
+	
+                                                Definir nombre_cliente Como Caracter;
+                                                Definir cantidad_torta, cantidad_torta1, cantidad_torta2, cantidad_torta3 Como Real;
+                                                Definir total_torta1, total_torta2, total_torta3, total_dia Como Real;
+                                                Definir disp_1, disp_2, disp_3 Como Entero;
+                                                Definir menu Como Entero;
+                                                Definir Opcion Como Entero;
+                                                Definir opcion_torta Como Entero;
+                                                
+                                                Escribir "  									";
+                                                Escribir "***********  Pasteleria Don Carlos  ***********";
+                                                Escribir "  										   ";
+                                                Escribir "          ******* Bienvenido *******";
+                                                Escribir "  									";
+                                                Escribir "Indique su opción.";
+                                                Escribir "  									";
+                                                Escribir "1. Registrar una Venta";
+                                                Escribir "2. Total Ventas del dia";
+                                                Leer menu;
+                                                
+                                                Limpiar Pantalla;
+                                                
+                                                
+                                                
+                                                Segun menu Hacer
+                                                    1:
+                                                        Escribir "Nombre del Cliente";
+                                                        Leer nombre_cliente;
+                                                        Escribir "Indique su opción.";
+                                                        Escribir "  									";
+                                                        Escribir "1. Torta de Marqueza, hasta 30 porciones, detalle Corazón    $35000";
+                                                        Escribir "2. Torta de Maracuyá, hasta 12 porciones, detalle Venom      $12000";
+                                                        Escribir "3. Torta de Lulo, hasta 20 porciones, decoración Bautizo     $22000";
+                                                        Leer opcion_torta;
+                                                        
+                                                        Segun opcion_torta Hacer
+                                                            1:
+                                                                Escribir "Tortas disponible = 8";
+                                                                Escribir "Cantidad:";
+                                                                Leer cantidad_torta;
+                                                                total_torta1<-cantidad_torta*35000;
+                                                                Escribir "  									";
+                                                                Escribir "Total a pagar: ", total_torta1;
+                                                                disp_1<-8 - cantidad_torta;
+                                                                Escribir "Tortas restantes= ", disp_1;
+                                                            2:
+                                                                Escribir "Tortas disponible = 5";
+                                                                Escribir "Cantidad:";
+                                                                Leer cantidad_torta;
+                                                                total_torta2<-cantidad_torta*12000;
+                                                                Escribir "  									";
+                                                                Escribir "Total a pagar: ", total_torta2;
+                                                                disp_2<-5 - cantidad_torta;
+                                                                Escribir "Tortas restantes= ", disp_2;
+                                                                
+                                                            3:
+                                                                Escribir "Tortas disponible = 5";
+                                                                Escribir "Cantidad:";
+                                                                Leer cantidad_torta;
+                                                                total_torta3<-cantidad_torta*100000;
+                                                                Escribir "  									";
+                                                                Escribir "Total a pagar: ", total_torta3;
+                                                                disp_3<-5 - cantidad_torta;
+                                                                Escribir "Tortas restantes= ", disp_3;
+                                                                
+                                                        FinSegun
+                                                        
+                                                    2:
+                                                        Escribir "Indique la cantidad de tortas Marqueza, 30 porciones, decoración Corazón, vendidas por día";
+                                                        Leer cantidad_torta1;
+                                                        Escribir "Indique la cantidad de tortas de Maracuyá, 12 porciones, decoración Venom, vendidas por día";
+                                                        Leer cantidad_torta2;
+                                                        Escribir "Indique la cantidad de tortas de Lulo, 20 porciones, decoración Bautizo, vendidas por día";
+                                                        Leer cantidad_torta3;
+                                                        total_torta1<-cantidad_torta1*250000;
+                                                        total_torta2<-cantidad_torta2*50000;
+                                                        total_torta3<-cantidad_torta3*100000;
+                                                        total_dia<-total_torta1+total_torta2+total_torta3;
+                                                        
+                                                        Escribir "Se vendieron ", cantidad_torta1, " Total: $ ", total_torta1;
+                                                        Escribir "Se vendieron ", cantidad_torta2, " Total: $ ", total_torta2;
+                                                        Escribir "Se vendieron ", cantidad_torta3, " Total: $ ", total_torta3;
+                                                        Escribir "  ";
+                                                        Escribir "Total diario: $ ", total_dia;
+                                                        
+                                                FinSegun
+                                                
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 9</span>
+                                    <p>9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+                                </div>
+                                <div class="card-action" id="code9">
+                                    <pre>
+                                        <code>
+                                            Proceso app_area_geometria
+	  
+                                                    //Declarar variables
+                                                
+                                                    Definir base_triangulo Como Real;
+                                                    Definir altura_triangulo Como Real;
+                                                    Definir area_triangulo Como Real;
+                                                    Definir altura_trapecio Como Real;
+                                                    Definir base_inferior Como Real;
+                                                    Definir base_superior Como Real;
+                                                    Definir area_trapecio Como Real;
+                                                    Definir base_rectangulo Como Real;
+                                                    Definir altura_rectangulo Como Real;
+                                                    Definir area_rectangulo Como Real;		
+                                                    Definir menu Como Entero;
+                                                    
+                                                    //Menú e inicio
+                                                    
+                                                    Escribir "  													 ";
+                                                    Escribir "    ***********  Cálculo del área de figuras geométricas ***********";
+                                                    Escribir "  													 ";
+                                                    Escribir "                  ***********  Bienvenido  ***********";
+                                                    Escribir "  													 ";
+                                                    Escribir "¿Sobre qué figura va a hacer el cáculo? Indique su opción.";
+                                                    Escribir "1. Triángulo.";
+                                                    Escribir "2. Trapecio.";
+                                                    Escribir "3. Rectángulo";
+                                                    Escribir "4. Salir";
+                                                    Leer menu;
+                                                    
+                                                    //Cálculo de áreas de figuras geométricas y salir
+                                                    
+                                                    Segun menu Hacer
+                                                        1:
+                                                            Escribir "Indique los siguientes datos para calcular el área de un triángulo";
+                                                            Escribir "  											 ";
+                                                            Escribir "Indique la altura del triángulo (cm)";
+                                                            Leer altura_triangulo;
+                                                            Escribir "Indique la base del triángulo (cm)";				
+                                                            Leer base_triangulo;
+                                                            area_triangulo <- (base_triangulo * altura_triangulo) / 2;
+                                                            Escribir "                                              ";
+                                                            Escribir "      /////// Área del cuadardo = ", area_triangulo, " cm2 ///////";
+                                                            Escribir "                                              ";
+                                                        2:
+                                                            Escribir "Indique los siguientes datos para calcular el área de un trapecio";
+                                                            Escribir "                                              ";
+                                                            Escribir "Indique la altura del trapecio (cm)";;
+                                                            Leer altura_trapecio;
+                                                            Escribir "Indique la base inferior del trapecio (cm)";;
+                                                            Leer base_inferior;
+                                                            Escribir "Indique la base superior del trapecio (cm)";;
+                                                            Leer base_superior;
+                                                            area_trapecio <- (base_inferior + base_superior) * altura_trapecio / 2;
+                                                            Escribir "                                              ";
+                                                            Escribir "     /////// Área del Trapecio = ", area_trapecio, " cm2 ///////";
+                                                            Escribir "                                              ";
+                                                        3:
+                                                            Escribir "Indique los siguientes datos para calcular el área de un rectángulo";
+                                                            Escribir "                                              ";
+                                                            Escribir "Indique la base del rectángulo (cm)";
+                                                            Leer base_rectangulo;
+                                                            Escribir "Indique la altura del rectángulo (cm";
+                                                            Leer altura_rectangulo;
+                                                            area_rectangulo <- base_rectangulo * altura_rectangulo;
+                                                            Escribir "                                               ";
+                                                            Escribir "     /////// Área del rectángulo = ", area_rectangulo, " cm2 ///////";
+                                                            Escribir "                                              ";
+                                                        4:
+                                                            Escribir "                                              ";
+                                                            Escribir "       ******* ¡No olvides practicar! ¡Vuelve pronto! *******";
+                                                            Escribir "                                              ";
+                                                        De Otro Modo:
+                                                            Escribir "                                              ";
+                                                            Escribir "       ******* Opción incorrecta. Intenta de nuevo. *******";
+                                                            
+                                                        5:
+                                                    FinSegun
+                                                    
+                                            FinProceso
+
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div class="card col s12 m9">
+                                <div class="card-content">
+                                    <span class="card-title">Ejercicio 10</span>
+                                    <p>10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+                                </div>
+                                <div class="card-action" id="code10">
+                                    <pre>
+                                        <code>
+                                            Proceso banco_fiel
+	
+                                                //Decalración de variables
+                                                
+                                                Definir saldo Como Entero;
+                                                Definir retiro Como Entero;
+                                                Definir saldo_actual Como Entero;
+                                                Definir numero_cuenta Como Caracter;
+                                                Definir menu Como Entero;
+                                                Definir consignacion Como Real;
+                                                
+                                                //Inicialización de variable
+                                                
+                                                saldo<-350000;
+                                                
+                                                //Menú principal
+                                                
+                                                Escribir "  										    ";
+                                                Escribir "                       *********** Banco Fiel ***********";
+                                                Escribir "                                             ";
+                                                Escribir "                           ******* Bienvenido *******";
+                                                Escribir "                                             ";
+                                                Escribir "Seleccione una Opción";
+                                                Escribir "  											";
+                                                Escribir "1. Hacer una consignación";
+                                                Escribir "2. Realizar retiro";
+                                                Escribir "3. Consulta de saldo";
+                                                Leer menu;
+                                                
+                                                
+                                                Limpiar Pantalla;
+                                                
+                                                
+                                                
+                                                Segun menu Hacer
+                                                    1:
+                                                        Escribir "Hacer una consignación";
+                                                        Escribir "  									 ";
+                                                        Escribir "Indique el número de la cuenta donde va a consignar.";
+                                                        Leer numero_cuenta;
+                                                        Escribir "Indique el monto que desea consignar (consignación mínima = $ 10.000)";
+                                                        leer consignacion;
+                                                        si consignacion >= 10000 Entonces
+                                                            Escribir "La consignación a la cuenta ", numero_cuenta,  " por $ ", consignacion, " fue exitosa";
+                                                            saldo_actual<-saldo+consignacion;
+                                                            Escribir "Su saldo actual es de $ ", saldo_actual;
+                                                        SiNo
+                                                            Escribir "Cantidad menor a la permitida. Verifique e intente de nuevo.";
+                                                        FinSi
+                                                        
+                                                    2:
+                                                        Escribir "Retirar";
+                                                        Escribir "  									 ";
+                                                        Escribir "Su saldo actual es $ ", saldo;
+                                                        Escribir "Indique el monto a retirar (monto mínimo de retiro = $ 10000)";
+                                                        Leer retiro;
+                                                        si retiro >= 10000 y retiro <= saldo Entonces
+                                                            Escribir "Su retiro por $ ", retiro, " ha sido exitoso";
+                                                            saldo_actual<-saldo-retiro;
+                                                            Escribir "Su saldo actual es de $ ", saldo_actual;
+                                                            
+                                                        SiNo
+                                                            Escribir "El saldo de su cuenta es menor al monto solicitado. Por favor, verifique e intente de nuevo.";
+                                                            
+                                                        FinSi
+                                                    3:
+                                                        Escribir "Consultar saldo";
+                                                        Escribir "  										 ";
+                                                        Escribir "Su saldo actual es de $ ", saldo;
+                                                FinSegun
+                                                
+                                            FinProceso
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>
